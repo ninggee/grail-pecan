@@ -1,0 +1,232 @@
+Buildfile: /home/lpxz/eclipse/workspace/pecan/pecan-monitor/fix.xml
+buggy-monitor:
+     [java] JIN's:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] before rInPC reduction:6
+     [java] !!!panc: $r5 = r0.<example.URLParse: java.lang.String url> 52
+     [java] !!!canc: $r6 = r0.<example.URLParse: java.lang.String url> 53
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r4 = r0.<example.URLParse: java.lang.String url> 51
+     [java] !!!canc: $r5 = r0.<example.URLParse: java.lang.String url> 52
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r4 = r0.<example.URLParse: java.lang.String url> 51
+     [java] !!!canc: $r6 = r0.<example.URLParse: java.lang.String url> 53
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] petri net size:174
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r3 = r0.<example.URLParse: java.lang.String url> 50
+     [java] !!!canc: $r4 = r0.<example.URLParse: java.lang.String url> 51
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r3 = r0.<example.URLParse: java.lang.String url> 50
+     [java] !!!canc: $r5 = r0.<example.URLParse: java.lang.String url> 52
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r3 = r0.<example.URLParse: java.lang.String url> 50
+     [java] !!!canc: $r6 = r0.<example.URLParse: java.lang.String url> 53
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] after rInPC reduction:6
+     [java] before subsume reduction:6
+     [java] after subsume reduction:1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.9 seconds.
+     [java] [Spark] Type masks in 0.5 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 48.6 seconds.
+     [java] [Spark] Solution found in 48.6 seconds.
+     [java] before merging:6
+     [java] after merging, I have 1 super bugs to fix after merging
+     [java] mergedbug 1493124975 contains N components: 2
+     [java] locking:r0.<example.URLParse: java.lang.String url> = $r15 
+     [java] in <example.URLParse: void replaceVal(java.lang.String,java.lang.String)>->|
+     [java] locking the whole method:<example.URLParse: java.lang.String getVal(java.lang.String)>->|
+     [java] time of fixing AV:15
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/example/URLParse.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/AVfix/debug/Chocalate.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/example/ExampleThread.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/example/Example.class
+     [java] ===========================================
+     [java] Peng's:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] before rInPC reduction:6
+     [java] !!!panc: $r5 = r0.<example.URLParse: java.lang.String url> 52
+     [java] !!!canc: $r6 = r0.<example.URLParse: java.lang.String url> 53
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r4 = r0.<example.URLParse: java.lang.String url> 51
+     [java] !!!canc: $r5 = r0.<example.URLParse: java.lang.String url> 52
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r4 = r0.<example.URLParse: java.lang.String url> 51
+     [java] !!!canc: $r6 = r0.<example.URLParse: java.lang.String url> 53
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r3 = r0.<example.URLParse: java.lang.String url> 50
+     [java] !!!canc: $r4 = r0.<example.URLParse: java.lang.String url> 51
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r3 = r0.<example.URLParse: java.lang.String url> 50
+     [java] !!!canc: $r5 = r0.<example.URLParse: java.lang.String url> 52
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!panc: $r3 = r0.<example.URLParse: java.lang.String url> 50
+     [java] !!!canc: $r6 = r0.<example.URLParse: java.lang.String url> 53
+     [java] msig:<example.URLParse: java.lang.String getVal(java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.getVal(URLParse.java:32)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] !!!ranc: r0.<example.URLParse: java.lang.String url> = $r16 45
+     [java] msig:<example.URLParse: void replaceVal(java.lang.String,java.lang.String)>
+     [java] ctxts:
+     [java] example.URLParse.replaceVal(URLParse.java:34)
+     [java] example.URLParse.parse(ExampleThread.java:17)
+     [java] example.ExampleThread.run(-1)
+     [java] petri net size:174
+     [java] after rInPC reduction:6
+     [java] before subsume reduction:6
+     [java] after subsume reduction:1
+     [java] 1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.9 seconds.
+     [java] [Spark] Type masks in 0.5 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 49.6 seconds.
+     [java] [Spark] Solution found in 49.6 seconds.
+     [java] locking the whole method:<example.URLParse: java.lang.String getVal(java.lang.String)>->|
+     [java] locking:r0.<example.URLParse: java.lang.String url> = $r15 
+     [java] in <example.URLParse: void replaceVal(java.lang.String,java.lang.String)>->|
+     [java] time of fixing av:10
+     [java] time of fixing deadlock: 35
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/example/URLParse.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/AVfix/debug/Chocalate.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/example/ExampleThread.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/example/Example.class
+BUILD SUCCESSFUL
+Total time: 1 minute 56 seconds
+
+Original: 10 runs, never succeed to get the time:
+key1=Alice&key2=Bob
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+	at java.lang.String.substring(String.java:1935)
+	at example.URLParse.getVal(URLParse.java:64)
+	at example.URLParse.parse(URLParse.java:32)
+	at example.ExampleThread.run(ExampleThread.java:17)
+	
+Jin:
+key1=Alice&key2=Bob
+after parsing: key1=A&key2=B
+the process lasts for:29
+
+Peng:
+key1=Alice&key2=Bob
+after parsing: key1=A&key2=B
+the process lasts for:25
+
+

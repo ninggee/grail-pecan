@@ -1,0 +1,21 @@
+
+*** Violation Patterns [ID - Memory Location - Line Number - Thread - Access Type] ***
+
+--------------------------------------
+total time (msec): 1560
+
+
+-------------------------------------
+
+Number of Threads: 19
+Number of Shared Variables: 102
+Number of Lock Nodes: 12177
+Number of Message Nodes: 239
+Number of Non-Method Entry/Exit Nodes: 44152
+Number of Read/Write Nodes: 31736
+Number of Total Nodes: 44152
+
+Number of BUGS (no contexts): 29
+
+Number of BUGS: 63
+

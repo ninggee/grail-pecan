@@ -1,0 +1,165 @@
+Opened results\SPECjbbSingleJVM\SPECjbb.004.results
+Opened results\SPECjbbSingleJVM\SPECjbb.004.raw
+
+Licensed Materials - Property of SPEC
+SPECjbb2005
+Copyright (c) 2005 Standard Performance Evaluation Corporation (SPEC),All rights reserved,
+
+Benchmark SPECjbb2005 1.07 now Opening
+
+jbb.jar not in CLASSPATH
+
+
+Checking whether run will be valid
+INVALID:  per_jvm_warehouse_rampup = 1.0, must be 3.0
+INVALID:  per_jvm_warehouse_rampdown = 1.0, must be 20.0
+INVALID:  ramp_up_seconds = 1, must be 30
+INVALID:  measurement_seconds = 1, must be 240
+
+INVALID:  Run will NOT be compliant
+
+Constructing the company now   Hang....on
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 1...
+
+
+Loading Warehouse 2...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+Timing Measurement began Mon Jul 05 17:30:56 CST 2010 for 0.02 minutes
+Timing Measurement ended Mon Jul 05 17:30:57 CST 2010
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 9370
+Maximum transactions by a warehouse = 10788
+Difference (thread spread) = 1418 (13.14%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 2 warehouses                                   
+................. SPECjbb2005 1.07 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:      8857      0.63   0.000   0.013   0.000   total      137.8MB
+      Payment:      6108      0.28   0.000   0.016   0.000    used       65.6MB
+  OrderStatus:       611      0.04   0.000   0.014   0.000
+     Delivery:       611      0.17   0.000   0.005   0.000
+  Stock Level:       611      0.31   0.000   0.220   0.001
+  Cust Report:      3360      0.30   0.000   0.016   0.000
+
+           throughput =      20077.69 SPECjbb2005 bops 
+
+
+Calling Reporter
+SPECjbb2005 bops = 6693, SPECjbb2005 bops/JVM = 6693
+
+Neptune Ocean King Systems TurboBlaster 2
+Phobos Ltd Phobic Java 1.5.0
+SPEC license # 50,  Tested by: Neptune Corp.,  Test date: Jul 5, 2010
+
+Validity
+INVALID because benchmark recompiled or jbb.jar not first in CLASSPATH.
+INVALID: Missing point: 1 required for publication; all points up to the peak, 2, are required.
+INVALID: all points up to the peak are required
+INVALID: at least the points from 1 to 8 are needed for a publishable run.
+Warning: all points from 2 to 4 are averaged for metric; 0's will be used for missing points.
+
+                   SPEC scores                                                                                        
+     Warehouses               Thrput
+            * 2                20078
+                                    
+Throughput      6693                
+
+HARDWARE                                            | SOFTWARE                                                         
+Vendor                    Neptune Ocean King        | Vendor               Phobos Ltd                                  
+                          Systems                   | Vendor URL           http://www.phobos.uk.co                     
+Vendor URL                http://www.neptune.com    | JVM Version          Phobic Java 1.5.0                           
+Model                     TurboBlaster 2            | Command Line         java -ms256m -mx1024m -spec.jbb.JBBmain     
+Processor                 ARM                       |                      -propfile Test1                             
+MHz                       300                       | Initial Heap Mem     256                                         
+# of Chips                1                         | (MB)                                     
+# of Cores                2                         | Max Heap Mem (MB)    1024                                        
+# of Cores/Chip           2                         | JVM addressing bits  32                                          
+HW Threading Enabled      No                        | JVM CLASSPATH        C:\Users\Jeff\Desktop\workspace\specjbb2005\
+Procs avail to Java       2                         |                      bin                                         
+Memory (MB)               4096                      | JVM BOOTCLASSPATH    C:\Program Files                            
+Memory Details            punch cards               |                      (x86)\Java\jre6\bin;.;C:\Windows\Sun\Java\bi
+L1 Cache                  4KBI+4KBD                 |                      n;C:\Windows\system32;C:\Windows;C:/Program 
+L2 Cache                  64KB(I+D) off chip        |                      Files (x86)/Java/jre6/bin/client;C:/Program 
+Other Cache                                         |                      Files (x86)/Java/jre6/bin;C:\Program Files  
+Filesystem                UFS                       |                      (x86)\MiKTeX                                
+Disks                     1 x 4GB SCSI (classes) 1  |                      2.8\miktex\bin;C:\Windows\system32;C:\Window
+                          x 12GB SCSI (OS)          |                      s;C:\Windows\System32\Wbem;C:\Windows\System
+Other H/W                 AT&T Rotary Telephone     |                      32\WindowsPowerShell\v1.0\;C:\Program Files 
+                                                    |                      (x86)\Common Files\Thunder                  
+                                                    |                      Network\KanKan\Codecs;C:\Program Files      
+                                                    |                      (x86)\Mercurial\;C:\Program Files           
+                                                    |                      (x86)\Java\jdk1.6.0_18\bin                  
+                                                    | OS Version           Phobos DOS V33.333 patch-level 78           
+                                                    | Other S/W            Neptune JIT Accelerator 2.3b6               
+                                                    |                                                                  
+                                                    | AOT Compilation Details                                          
+                                                    | <p>precompiled code                                              
+                                                    | for<ul><li>Deliverytransaction.process</li><li>TransactionManager
+                                                    | .go</li></ul>loaded at startup</p>                               
+                                                    |                                                                  
+                                                    | TUNING AND NOTES                                                 
+                                                    | Operating system                                                 
+                                                    | tunings<UL><LI>bufcache=1024</LI><LI>maxthreads_per_user=65536</L
+                                                    | I></UL>                                                          
+                                                    | "Notes here"                                                     
+                                                    |                                                                  
+                                                                                                                       
+TEST INFORMATION                     
+Tested by          Neptune Corp.     
+SPEC License       50                
+Test Location      Santa Monica, CA  
+Test Date          Jul 5, 2010       
+JVM available      Jan-2000          
+H/w available      Jan-2000          
+OS available       May-2000          
+Other s/w          Feb-2000          
+available                            
+*** Invalid Result
+This result is not valid for the following reason(s):
+INVALID because benchmark recompiled or jbb.jar not first in CLASSPATH.
+INVALID: Missing point: 1 required for publication; all points up to the peak, 2, are required.
+INVALID: all points up to the peak are required
+INVALID: at least the points from 1 to 8 are needed for a publishable run.
+Warning: all points from 2 to 4 are averaged for metric; 0's will be used for missing points.
+INVALID run; Score is 6693
+
+
+
+* Details of Runs
+
+  Wh.   Score     Tot.     Used  Thread elapsed Trans.           Count Resp. Time (s)
+                  Heap     Heap  spread  > 120s Type                   total max     
+                  (MB)     (MB)%       %                                             
+    2   20078      138       66    13.1    .400 new_order         8857 .627  .013    
+                                                payment           6108 .278  .016    
+                                                order_status       611 .036  .014    
+                                                delivery           611 .169  <0.01   
+                                                stock_level        611 .312  .220    
+                                                cust_report       3360 .297  .016    
+
+SPECjbb2005 Version: [SPECjbb2005 1.07, March 15, 2006]
+Reporting page (C) Copyright SPEC, 2005. All rights reserved
+
+Output files: results\SPECjbbSingleJVM\SPECjbb.004.txt, results\SPECjbbSingleJVM\SPECjbb.004.raw, results\SPECjbbSingleJVM\SPECjbb.004.html
+
+
+Reporter messages:
+INVALID because benchmark recompiled or jbb.jar not first in CLASSPATH.
+INVALID: Missing point: 1 required for publication; all points up to the peak, 2, are required.
+INVALID: all points up to the peak are required
+INVALID: at least the points from 1 to 8 are needed for a publishable run.
+Warning: all points from 2 to 4 are averaged for metric; 0's will be used for missing points.
+INVALID run; Score is  6693
+

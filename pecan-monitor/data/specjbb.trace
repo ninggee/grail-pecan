@@ -1,0 +1,190 @@
+Buildfile: /home/lpxz/eclipse/workspace/pecan/pecan-monitor/fix.xml
+buggy-monitor:
+     [java] ===========================================
+     [java] Peng's:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] !!!panc: $i7 = $r17.<spec.jbb.Company: int initThreadsCount> 206
+     [java] !!!canc: $r17.<spec.jbb.Company: int initThreadsCount> = $i8 206
+     [java] msig:<spec.jbb.TransactionManager: void go()>
+     [java] ctxts:
+     [java] spec.jbb.TransactionManager.go(JBBmain.java:127)
+     [java] spec.jbb.JBBmain.run(-1)
+     [java] !!!ranc: $r17.<spec.jbb.Company: int initThreadsCount> = $i8 206
+     [java] msig:<spec.jbb.TransactionManager: void go()>
+     [java] ctxts:
+     [java] spec.jbb.TransactionManager.go(JBBmain.java:127)
+     [java] spec.jbb.JBBmain.run(-1)
+     [java] before subsume reduction:1
+     [java] after subsume reduction:1
+     [java] 1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 1.3 seconds.
+     [java] [Spark] Type masks in 0.8 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 120.2 seconds.
+     [java] [Spark] Solution found in 120.2 seconds.
+     [java] bad guys before applying locking:0
+     [java] locking the whole method:<spec.jbb.TransactionManager: void go()>->|
+     [java] locking:$r21.<spec.jbb.Company: int initThreadsCount> = $i9 
+     [java] in <spec.jbb.TransactionManager: void go()>->|
+     [java] time of fixing av:86
+     [java] time of fixing deadlock: 42
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/JBBmain.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Company.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/JBBProperties.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/TextiReport.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/validity/digest.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/RunSequencer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/TransactionManager.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/SaveOutput.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/TimerData.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Transaction.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/Report.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/JBButil.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/JBBLogFormatter.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/TextColumn.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/TextMetrics.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/ReportProps.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/TextBlock.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/validity/digestExpected.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/ResFilter.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Company$runModes.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Warehouse.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/infra/Util/TransactionLogBuffer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/NewOrderTransaction.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/JBBDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/JBBSortedStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Customer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Item.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Infrastructure.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/Metrics.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/Template.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/TableGroupCompare.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/Title.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/TemplateCompare.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/Result.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/Run.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Address.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/District.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Stock.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/History.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/infra/Util/ScreenException.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Order.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/infra/Util/XMLTransactionLog.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Orderline.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/NewOrder.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/TreeMapDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Infrastructure$SynchronizedJBBDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/MapDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/jbb/Infrastructure$SynchronizedJBBSortedStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/Table.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/spec/reporter/GraphImage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/AVfix/debug/Chocalate.class
+     [java] JIN's:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] !!!panc: $i7 = $r17.<spec.jbb.Company: int initThreadsCount> 206
+     [java] !!!canc: $r17.<spec.jbb.Company: int initThreadsCount> = $i8 206
+     [java] msig:<spec.jbb.TransactionManager: void go()>
+     [java] ctxts:
+     [java] spec.jbb.TransactionManager.go(JBBmain.java:127)
+     [java] spec.jbb.JBBmain.run(-1)
+     [java] !!!ranc: $r17.<spec.jbb.Company: int initThreadsCount> = $i8 206
+     [java] msig:<spec.jbb.TransactionManager: void go()>
+     [java] ctxts:
+     [java] spec.jbb.TransactionManager.go(JBBmain.java:127)
+     [java] spec.jbb.JBBmain.run(-1)
+     [java] before subsume reduction:1
+     [java] after subsume reduction:1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.7 seconds.
+     [java] [Spark] Type masks in 0.8 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 118.6 seconds.
+     [java] [Spark] Solution found in 118.6 seconds.
+     [java] bad guys before applying locking:0
+     [java] before merging:1
+     [java] after merging, I have 1 super bugs to fix after merging
+     [java] mergedbug 559777099 contains N components: 1
+     [java] locking the whole method:<spec.jbb.TransactionManager: void go()>->|
+     [java] time of fixing AV:4
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/JBBmain.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Company.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/JBBProperties.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/TextiReport.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/validity/digest.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/RunSequencer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/TransactionManager.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/SaveOutput.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/TimerData.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Transaction.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/Report.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/JBButil.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/JBBLogFormatter.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/TextColumn.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/TextMetrics.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/ReportProps.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/TextBlock.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/validity/digestExpected.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/ResFilter.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Company$runModes.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Warehouse.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/infra/Util/TransactionLogBuffer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/NewOrderTransaction.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/JBBDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/JBBSortedStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Customer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Item.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Infrastructure.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/Metrics.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/Template.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/TableGroupCompare.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/Title.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/TemplateCompare.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/Result.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/Run.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Address.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/District.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Stock.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/History.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/infra/Util/ScreenException.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Order.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/infra/Util/XMLTransactionLog.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Orderline.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/NewOrder.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/TreeMapDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Infrastructure$SynchronizedJBBDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/MapDataStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/jbb/Infrastructure$SynchronizedJBBSortedStorage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/Table.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/spec/reporter/GraphImage.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/AVfix/debug/Chocalate.class
+     [java] ===========================================
+     [java] NaiveD:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] !!!panc: $i7 = $r17.<spec.jbb.Company: int initThreadsCount> 206
+     [java] !!!canc: $r17.<spec.jbb.Company: int initThreadsCount> = $i8 206
+     [java] msig:<spec.jbb.TransactionManager: void go()>
+     [java] ctxts:
+     [java] spec.jbb.TransactionManager.go(JBBmain.java:127)
+     [java] spec.jbb.JBBmain.run(-1)
+     [java] !!!ranc: $r17.<spec.jbb.Company: int initThreadsCount> = $i8 206
+     [java] msig:<spec.jbb.TransactionManager: void go()>
+     [java] ctxts:
+     [java] spec.jbb.TransactionManager.go(JBBmain.java:127)
+     [java] spec.jbb.JBBmain.run(-1)
+     [java] 1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.7 seconds.
+     [java] [Spark] Type masks in 0.8 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+
+     
+     faithfully report !
+     only  1 AV!
+     

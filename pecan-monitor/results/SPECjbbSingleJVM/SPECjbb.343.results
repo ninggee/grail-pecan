@@ -1,0 +1,221 @@
+Opened results/SPECjbbSingleJVM/SPECjbb.343.results
+Opened results/SPECjbbSingleJVM/SPECjbb.343.raw
+
+Licensed Materials - Property of SPEC
+SPECjbb2005
+Copyright (c) 2005 Standard Performance Evaluation Corporation (SPEC),All rights reserved,
+
+Benchmark SPECjbb2005 1.07 now Opening
+
+jbb.jar not in CLASSPATH
+
+
+Checking whether run will be valid
+INVALID:  warehouse_population_base = 2, must be 60
+INVALID:  per_jvm_warehouse_rampup = 1.0, must be 3.0
+INVALID:  per_jvm_warehouse_rampdown = 1.0, must be 20.0
+INVALID:  ramp_up_seconds = 1, must be 30
+INVALID:  measurement_seconds = 1, must be 240
+INVALID:  override_itemtable_size = 2, must be 20000
+
+INVALID:  Run will NOT be compliant
+
+Constructing the company now   Hang....on
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Loading Warehouse 1...
+
+
+Loading Warehouse 2...
+
+
+Start User Threads
+  started user thread for Warehouse 1
+  started user thread for Warehouse 2
+Timing Measurement began Tue Aug 07 05:09:46 HKT 2012 for 0.02 minutes
+Timing Measurement ended Tue Aug 07 05:09:47 HKT 2012
+
+
+Calculating results
+
+Minimum transactions by a warehouse = 1
+Maximum transactions by a warehouse = 1
+Difference (thread spread) = 0 (0%)
+
+===============================================================================
+TOTALS FOR: COMPANY with 2 warehouses                                   
+................. SPECjbb2005 1.07 Results (time in seconds) .................
+                   Count     Total    Min     Max     Avg    Heap Space
+    New Order:         1      0.93   0.927   0.927   0.927   total      249.0MB
+      Payment:         0      0.00  ******   0.000   0.000    used      121.9MB
+  OrderStatus:         0      0.00  ******   0.000   0.000
+     Delivery:         0      0.00  ******   0.000   0.000
+  Stock Level:         1      0.64   0.643   0.643   0.643
+  Cust Report:         0      0.00  ******   0.000   0.000
+
+           throughput =          1.96 SPECjbb2005 bops 
+
+
+Calling Reporter
+SPECjbb2005 bops = n/a, SPECjbb2005 bops/JVM = n/a
+
+Neptune Ocean King Systems TurboBlaster 2
+Phobos Ltd Phobic Java 1.5.0
+SPEC license # 50,  Tested by: Neptune Corp.,  Test date: Aug 7, 2012
+
+Validity
+INVALID because benchmark recompiled or jbb.jar not first in CLASSPATH.
+INVALID: Missing point: 1 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 3 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 4 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 5 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 6 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 7 required for publication; all points up to the peak, 8, are required.
+INVALID: all points up to the peak are required
+INVALID: at least the points from 1 to 8 are needed for a publishable run.
+Warning: all points from 8 to 16 are averaged for metric; 0's will be used for missing points.
+
+                   SPEC scores                                                                                        
+     Warehouses               Thrput
+              2                 1.96
+                                    
+Throughput      n/a                 
+
+HARDWARE                                            | SOFTWARE                                                         
+Vendor                    Neptune Ocean King        | Vendor               Phobos Ltd                                  
+                          Systems                   | Vendor URL           http://www.phobos.uk.co                     
+Vendor URL                http://www.neptune.com    | JVM Version          Phobic Java 1.5.0                           
+Model                     TurboBlaster 2            | Command Line         java -ms256m -mx1024m -spec.jbb.JBBmain     
+Processor                 ARM                       |                      -propfile Test1                             
+MHz                       300                       | Initial Heap Mem     256                                         
+# of Chips                1                         | (MB)                                     
+# of Cores                2                         | Max Heap Mem (MB)    1024                                        
+# of Cores/Chip           2                         | JVM addressing bits  32                                          
+HW Threading Enabled      No                        | JVM CLASSPATH        /home/lpxz/eclipse/workspace/pecan/pecan-mon
+Procs avail to Java       8                         |                      itor/bin:/home/lpxz/eclipse/workspace/pecan/
+Memory (MB)               4096                      |                      pecan-transformer/tmp/runtime/Specjbb:/home/
+Memory Details            punch cards               |                      lpxz/eclipse/workspace/soot24/classes:/home/
+L1 Cache                  4KBI+4KBD                 |                      lpxz/eclipse/workspace/soot24/lib/jasminclas
+L2 Cache                  64KB(I+D) off chip        |                      ses-2.3.0.jar:/home/lpxz/eclipse/workspace/s
+Other Cache                                         |                      oot24/lib/jedd-runtime.jar:/home/lpxz/eclips
+Filesystem                UFS                       |                      e/workspace/soot24/lib/jedd-translator.jar:/
+Disks                     1 x 4GB SCSI (classes) 1  |                      home/lpxz/eclipse/workspace/soot24/lib/polyg
+                          x 12GB SCSI (OS)          |                      lot-1.3.3.jar:/home/lpxz/eclipse/workspace/s
+Other H/W                 AT&T Rotary Telephone     |                      oot24/lib/svnant.jar:/home/lpxz/eclipse/work
+                                                    |                      space/soot24/lib/svnClientAdapter.jar:/home/
+                                                    |                      lpxz/eclipse/workspace/soot24/lib/TGGraphLay
+                                                    |                      out.jar:/home/lpxz/eclipse/workspace/soot24/
+                                                    |                      lib/xmlunit1.0.jar:/home/lpxz/eclipse/worksp
+                                                    |                      ace/soot24/lib/log4j.jar:/home/lpxz/eclipse/
+                                                    |                      workspace/soot24/lib/trove.jar:/home/lpxz/ec
+                                                    |                      lipse/workspace/soot24/lib/jboss-serializati
+                                                    |                      on.jar:/home/lpxz/eclipse/workspace/soot24/l
+                                                    |                      ib/jboss-common-4.0.2.jar:/home/lpxz/eclipse
+                                                    |                      /workspace/soot24/lib/junit-4.4.jar:/home/lp
+                                                    |                      xz/eclipse/workspace/soot24/javabdd_lib/java
+                                                    |                      bdd_0.6.jar:/home/lpxz/eclipse/workspace/soo
+                                                    |                      t24/lib/ant-antlr.jar:/home/lpxz/eclipse/wor
+                                                    |                      kspace/soot24/lib/ant-apache-bcel.jar:/home/
+                                                    |                      lpxz/eclipse/workspace/soot24/lib/ant-testut
+                                                    |                      il.jar:/home/lpxz/eclipse/workspace/soot24/l
+                                                    |                      ib/ant.jar:/home/lpxz/eclipse/workspace/soot
+                                                    |                      24/lib/coffer.jar:/home/lpxz/eclipse/workspa
+                                                    |                      ce/soot24/lib/java_cup.jar:/home/lpxz/eclips
+                                                    |                      e/workspace/soot24/lib/JFlex.jar:/home/lpxz/
+                                                    |                      eclipse/workspace/soot24/lib/junit-4.8.1.jar
+                                                    |                      :/home/lpxz/eclipse/workspace/soot24/lib/pao
+                                                    |                      .jar:/home/lpxz/eclipse/workspace/soot24/lib
+                                                    |                      /polyglot.jar:/home/lpxz/eclipse/workspace/s
+                                                    |                      oot24/lib/pth.jar:/home/lpxz/eclipse/workspa
+                                                    |                      ce/soot24/lib/xercesImpl.jar:/home/lpxz/ecli
+                                                    |                      pse/workspace/soot24/lib/xml-apis.jar:/home/
+                                                    |                      lpxz/eclipse/workspace/soot24/lib/ant-contri
+                                                    |                      b.jar:/home/lpxz/eclipse/workspace/soot24/ja
+                                                    |                      vabdd_lib/sablejbdd_real.jar:/home/lpxz/ecli
+                                                    |                      pse/workspace/soot24/lib/pia.jar:/home/lpxz/
+                                                    |                      eclipse/workspace/soot24/lib/poa.jar:/home/l
+                                                    |                      pxz/eclipse/workspace/pecan/pecan-monitor/li
+                                                    |                      b/xstream-1.3.1.jar:/home/lpxz/eclipse/works
+                                                    |                      pace/pecan/pecan-monitor/lib/xpp3_min-1.1.3.
+                                                    |                      4.O.jar:/home/lpxz/eclipse/workspace/pecan/p
+                                                    |                      ecan-monitor/lib/tools.jar:/home/lpxz/eclips
+                                                    |                      e/workspace/specjbb2005/bin                 
+                                                    | JVM BOOTCLASSPATH    /home/lpxz/pool/jdk_1.6.10_x64/jre/lib/amd64
+                                                    |                      /server:/home/lpxz/pool/jdk_1.6.10_x64/jre/l
+                                                    |                      ib/amd64:/home/lpxz/pool/jdk_1.6.10_x64/jre/
+                                                    |                      ../lib/amd64:/usr/lib64/firefox/:/usr/java/p
+                                                    |                      ackages/lib/amd64:/lib:/usr/lib             
+                                                    | OS Version           Phobos DOS V33.333 patch-level 78           
+                                                    | Other S/W            Neptune JIT Accelerator 2.3b6               
+                                                    |                                                                  
+                                                    | AOT Compilation Details                                          
+                                                    | <p>precompiled code                                              
+                                                    | for<ul><li>Deliverytransaction.process</li><li>TransactionManager
+                                                    | .go</li></ul>loaded at startup</p>                               
+                                                    |                                                                  
+                                                    | TUNING AND NOTES                                                 
+                                                    | Operating system                                                 
+                                                    | tunings<UL><LI>bufcache=1024</LI><LI>maxthreads_per_user=65536</L
+                                                    | I></UL>                                                          
+                                                    | "Notes here"                                                     
+                                                    |                                                                  
+                                                                                                                       
+TEST INFORMATION                     
+Tested by          Neptune Corp.     
+SPEC License       50                
+Test Location      Santa Monica, CA  
+Test Date          Aug 7, 2012       
+JVM available      Jan-2000          
+H/w available      Jan-2000          
+OS available       May-2000          
+Other s/w          Feb-2000          
+available                            
+*** Invalid Result
+This result is not valid for the following reason(s):
+INVALID because benchmark recompiled or jbb.jar not first in CLASSPATH.
+INVALID: Missing point: 1 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 3 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 4 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 5 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 6 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 7 required for publication; all points up to the peak, 8, are required.
+INVALID: all points up to the peak are required
+INVALID: at least the points from 1 to 8 are needed for a publishable run.
+Warning: all points from 8 to 16 are averaged for metric; 0's will be used for missing points.
+INVALID run; Score is n/a
+
+
+
+* Details of Runs
+
+  Wh.   Score     Tot.     Used  Thread elapsed Trans.           Count Resp. Time (s)
+                  Heap     Heap  spread  > 120s Type                   total max     
+                  (MB)     (MB)%       %                                             
+    2    1.96      249      141   <0.01    1.90 new_order         1.00 .927  .927    
+                                                payment          <0.01 <0.01 <0.01   
+                                                order_status     <0.01 <0.01 <0.01   
+                                                delivery         <0.01 <0.01 <0.01   
+                                                stock_level       1.00 .643  .643    
+                                                cust_report      <0.01 <0.01 <0.01   
+
+SPECjbb2005 Version: [SPECjbb2005 1.07, March 15, 2006]
+Reporting page (C) Copyright SPEC, 2005. All rights reserved
+
+Output files: results/SPECjbbSingleJVM/SPECjbb.343.txt, results/SPECjbbSingleJVM/SPECjbb.343.raw, results/SPECjbbSingleJVM/SPECjbb.343.html
+
+
+Reporter messages:
+INVALID because benchmark recompiled or jbb.jar not first in CLASSPATH.
+INVALID: Missing point: 1 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 3 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 4 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 5 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 6 required for publication; all points up to the peak, 8, are required.
+INVALID: Missing point: 7 required for publication; all points up to the peak, 8, are required.
+INVALID: all points up to the peak are required
+INVALID: at least the points from 1 to 8 are needed for a publishable run.
+Warning: all points from 8 to 16 are averaged for metric; 0's will be used for missing points.
+INVALID run; Score is  n/a
+

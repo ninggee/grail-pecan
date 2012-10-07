@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="detect" name="pecan-monitor">
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="/home/lpxz/eclipse/workspace/soot24/lib/ant-contrib.jar"/>
+        </classpath>
+    </taskdef>
+	<loadproperties srcFile="../../Dcon/properties"/>
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../"/>
+	<import file="../../Dcon/path_def.xml" />
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="edu/hkust/clap/monitor/CopyOfMonitor.java"/>
+                <exclude name="edu/hkust/clap/engine/suffixtree/"/>
+                <exclude name="edu/hkust/clap/engine/EngineAllOld.java"/>
+                <exclude name="AVfix/fixing/JinFixingABug.java"/>
+                <exclude name="AVfix/icse/fixing/JinFixingABug.java"/>
+                <exclude name="AVfix/pldi/fixing/JinFixingABug.java"/>
+                <exclude name="AVfix/locking/RegionLocker.java"/>
+                <exclude name="AVfix/locking/CopyOfXedgesLocker.java"/>
+                <exclude name="AVfix/locking/AfixInfoInAMethod.java"/>
+            </fileset>
+        </copy>
+    </target>
+        <target name="clean">
+            <!--delete dir="bin"/-->
+            <delete includeemptydirs="true">
+            	    <fileset dir="tmp" includes="**/trace*"/>
+            </delete>
+        </target>
+
+    
+    <target depends="init" name="build">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <exclude name="edu/hkust/clap/monitor/CopyOfMonitor.java"/>
+            <exclude name="edu/hkust/clap/engine/suffixtree/"/>
+            <exclude name="edu/hkust/clap/engine/EngineAllOld.java"/>
+            <exclude name="AVfix/fixing/JinFixingABug.java"/>
+            <exclude name="AVfix/icse/fixing/JinFixingABug.java"/>
+            <exclude name="AVfix/pldi/fixing/JinFixingABug.java"/>
+            <exclude name="AVfix/locking/RegionLocker.java"/>
+            <exclude name="AVfix/locking/CopyOfXedgesLocker.java"/>
+            <exclude name="AVfix/locking/AfixInfoInAMethod.java"/>
+            <classpath refid="pecan-monitor.classpath"/>
+        	 <classpath refid="${projectname}.classpath"/>
+        </javac>
+    </target>
+   
+    <target name="EngineMain2">
+        <java classname="edu.hkust.clap.engine.EngineMain2" failonerror="true" fork="yes">
+        	 <jvmarg line="-Xmx12g"/>            
+            <classpath refid="pecan-monitor.classpath"/>
+        	 <classpath refid="${projectname}.classpath"/>
+        </java>
+    </target>
+    
+
+    <target name="EngineMain">
+        <java classname="edu.hkust.clap.engine.EngineMain" failonerror="true" fork="yes">
+            <jvmarg line="-Xmx12g"/>            	
+            <classpath refid="pecan-monitor.classpath"/>
+        	 <classpath refid="${projectname}.classpath"/>
+        </java>
+    	
+
+
+    </target>
+
+	
+	<target name ="detect">
+		 <antcall target="build"/>												
+		<antcall target="monitor"/>	
+		 <antcall target="EngineMain"/>
+    	<!--remove the trace object, it is IR, and  it is too large-->
+		 <antcall target="clean"/>
+	</target>
+
+
+
+    <target name="monitor">
+    	<echo message="load instrumented classes from folder: ${pecantrans.location}/tmp/runtime/${projectname}"/>
+        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">
+        	 <jvmarg line="-Xmx12g"/>            
+            <arg line="${mainClassArg}"/>
+        	<classpath>
+        	      <pathelement path="${pecanmonitor.location}/bin"/>        		
+        	 </classpath>   
+             <!--must before it, otherwise, the Monitor in monitoring project will not take effect-->
+        	<classpath>
+        	    <pathelement path="${pecantrans.location}/tmp/runtime/${projectname}"/>        		
+        	  </classpath>        	
+            <classpath refid="pecan-monitor.classpath"/>
+            <classpath refid="${projectname}.classpath"/>
+        </java>
+    </target>
+	
+	
+</project>

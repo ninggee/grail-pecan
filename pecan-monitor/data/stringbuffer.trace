@@ -1,0 +1,164 @@
+Buildfile: /home/lpxz/eclipse/workspace/pecan/pecan-monitor/fix.xml
+buggy-monitor:
+     [java] ===========================================
+     [java] Peng's:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] before rInPC reduction:1
+     [java] !!!panc: i0 = virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: int length()>() 443
+     [java] !!!canc: virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: void getChars(int,int,char[],int)>(0, i0, $r3, $i4) 447
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.append(StringBufferTest.java:25)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] !!!ranc: r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i9 667
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.delete(StringBufferTest.java:28)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] petri net size:148
+     [java] after rInPC reduction:1
+     [java] before subsume reduction:1
+     [java] after subsume reduction:1
+     [java] 1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.8 seconds.
+     [java] [Spark] Type masks in 0.5 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 51.2 seconds.
+     [java] [Spark] Solution found in 51.2 seconds.
+     [java] bad guys before applying locking:0
+     [java] locking the whole method:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>->|
+     [java] locking:r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i8 
+     [java] in <benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>->|
+     [java] time of fixing av:9
+     [java] time of fixing deadlock: 16
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/benchmarks/stringbuffer/StringBufferTest.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/benchmarks/stringbuffer/StringBuffer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/pengSootOutput/AVfix/debug/Chocalate.class
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] JIN's:
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] before rInPC reduction:1
+     [java] !!!panc: i0 = virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: int length()>() 443
+     [java] !!!canc: virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: void getChars(int,int,char[],int)>(0, i0, $r3, $i4) 447
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.append(StringBufferTest.java:25)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] !!!ranc: r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i9 667
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.delete(StringBufferTest.java:28)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] petri net size:148
+     [java] after rInPC reduction:1
+     [java] before subsume reduction:1
+     [java] after subsume reduction:1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.9 seconds.
+     [java] [Spark] Type masks in 0.5 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 49.7 seconds.
+     [java] [Spark] Solution found in 49.7 seconds.
+     [java] bad guys before applying locking:0
+     [java] before merging:1
+     [java] after merging, I have 1 super bugs to fix after merging
+     [java] mergedbug 1455259595 contains N components: 2
+     [java] locking the whole method:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>->|
+     [java] locking:r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i8 
+     [java] in <benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>->|
+     [java] time of fixing AV:13
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/benchmarks/stringbuffer/StringBufferTest.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/benchmarks/stringbuffer/StringBuffer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/jinSootOutput/AVfix/debug/Chocalate.class
+     [java] ===========================================
+     [java] NaiveD:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] !!!panc: i0 = virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: int length()>() 443
+     [java] !!!canc: virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: void getChars(int,int,char[],int)>(0, i0, $r3, $i4) 447
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.append(StringBufferTest.java:25)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] !!!ranc: r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i9 667
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.delete(StringBufferTest.java:28)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] 1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.9 seconds.
+     [java] [Spark] Type masks in 0.5 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 50.2 seconds.
+     [java] [Spark] Solution found in 50.2 seconds.
+     [java] bad guys before applying locking:0
+     [java] locking the whole method:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>->|
+     [java] locking:r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i8 
+     [java] in <benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>->|
+     [java] time of fixing av:9
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/naiveDSootOutput/benchmarks/stringbuffer/StringBufferTest.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/naiveDSootOutput/benchmarks/stringbuffer/StringBuffer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/naiveDSootOutput/AVfix/debug/Chocalate.class
+     [java] ===========================================
+     [java] NaiveS:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] !!!panc: i0 = virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: int length()>() 443
+     [java] !!!canc: virtualinvoke r1.<benchmarks.stringbuffer.StringBuffer: void getChars(int,int,char[],int)>(0, i0, $r3, $i4) 447
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.append(StringBufferTest.java:25)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] !!!ranc: r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i9 667
+     [java] msig:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>
+     [java] ctxts:
+     [java] benchmarks.stringbuffer.StringBuffer.delete(StringBufferTest.java:28)
+     [java] benchmarks.stringbuffer.StringBufferTest.run(-1)
+     [java] 1
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.9 seconds.
+     [java] [Spark] Type masks in 0.5 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 49.9 seconds.
+     [java] [Spark] Solution found in 49.9 seconds.
+     [java] bad guys before applying locking:0
+     [java] locking the whole method:<benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer append(benchmarks.stringbuffer.StringBuffer)>->|
+     [java] locking:r0.<benchmarks.stringbuffer.StringBuffer: int count> = $i8 
+     [java] in <benchmarks.stringbuffer.StringBuffer: benchmarks.stringbuffer.StringBuffer delete(int,int)>->|
+     [java] time of fixing av:9
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/naiveSSootOutput/benchmarks/stringbuffer/StringBufferTest.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/naiveSSootOutput/benchmarks/stringbuffer/StringBuffer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/naiveSSootOutput/AVfix/debug/Chocalate.class
+     [java] ===========================================
+     [java] Original:
+     [java] set the main class and the analyzedFolder in SootAgent4Fixing
+     [java] Warning: Phase wjtp.tnlp is not a standard Soot phase listed in XML files.
+     [java] I am 2.4 vertsion
+     [java] [Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+     [java] [Spark] Pointer Assignment Graph in 0.9 seconds.
+     [java] [Spark] Type masks in 0.5 seconds.
+     [java] [Spark] Pointer Graph simplified in 0.0 seconds.
+     [java] [Spark] Propagation in 49.5 seconds.
+     [java] [Spark] Solution found in 49.5 seconds.
+     [java] bad guys before applying locking:0
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/origSootOutput/benchmarks/stringbuffer/StringBufferTest.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/origSootOutput/benchmarks/stringbuffer/StringBuffer.class
+     [java] Writing to /home/lpxz/eclipse/workspace/pecan/pecan-monitor/origSootOutput/AVfix/debug/Chocalate.class
+BUILD SUCCESSFUL
+Total time: 4 minutes 54 seconds
+Frankly speaking, the data for small benchmarks are meaningless!
+Orig:
+10
+Peng:
+11
+Jin:12
+NaiveS 
+9
+Niave 10

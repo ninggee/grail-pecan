@@ -1,0 +1,106 @@
+  [java] I am 2.4 vertsion
+     [java] 140362 490 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r27 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140411 498 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r32 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140178 458 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140411 498 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r32 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140178 458 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140227 466 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r12 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140227 466 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r12 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140411 498 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r32 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140270 474 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r17 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140411 498 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r32 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140319 482 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r22 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140411 498 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r32 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140227 466 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r12 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140362 490 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r27 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140227 466 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r12 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140319 482 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r22 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140227 466 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r12 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140270 474 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r17 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140270 474 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r17 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140319 482 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r22 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140178 458 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140270 474 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r17 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140270 474 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r17 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140362 490 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r27 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140178 458 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140319 482 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r22 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140319 482 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r22 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140362 490 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r27 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140178 458 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140362 490 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r27 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 139805 321 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r7 = r0.<spec.jbb.TimerData: long[] minimumTime> ctxt:
+     [java] 140377 492 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r28 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140426 500 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r33 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140328 484 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r23 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140377 492 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r28 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140193 460 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r8 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140426 500 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r33 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140193 460 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r8 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140377 492 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r28 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140193 460 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r8 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140236 468 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r13 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140236 468 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r13 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140426 500 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r33 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140236 468 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r13 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140377 492 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r28 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140285 476 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r18 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140426 500 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r33 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140285 476 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r18 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140377 492 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r28 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140328 484 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r23 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140426 500 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r33 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140285 476 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r18 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140328 484 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r23 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140193 460 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r8 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140285 476 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r18 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140236 468 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r13 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140328 484 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r23 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140236 468 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r13 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140285 476 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r18 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140193 460 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r8 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 140328 484 1 READ msig:<spec.jbb.TimerData: void formatResults(spec.jbb.infra.Util.TransactionLogBuffer)> jcode:$r23 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 139809 324 11 WRITE msig:<spec.jbb.TimerData: void rollupTimerData(int,long,long,long,long,long)> jcode:$r9 = r0.<spec.jbb.TimerData: long[] maximumTime> ctxt:
+     [java] 102584 206 11 READ msig:<spec.jbb.TransactionManager: void go()> jcode:$i7 = $r17.<spec.jbb.Company: int initThreadsCount> ctxt:
+     [java] 102585 206 11 WRITE msig:<spec.jbb.TransactionManager: void go()> jcode:$r17.<spec.jbb.Company: int initThreadsCount> = $i8 ctxt:
+     [java] 108657 206 10 WRITE msig:<spec.jbb.TransactionManager: void go()> jcode:$r17.<spec.jbb.Company: int initThreadsCount> = $i8 ctxt:
+     [java] -------------------------------------
+     [java] Number of Threads: 3
+     [java] Number of Shared Variables: 103
+     [java] Number of Lock Nodes: 138
+     [java] Number of Message Nodes: 19
+     [java] Number of Non-Method Entry/Exit Nodes: 141281
+     [java] Number of Read/Write Nodes: 0
+     [java] Number of Total Nodes: 141281
+     [java] Number of Races: 0
+     [java] Number of Atomicity Violations: 31
+     [java] Number of ASVs: 0
+clean:

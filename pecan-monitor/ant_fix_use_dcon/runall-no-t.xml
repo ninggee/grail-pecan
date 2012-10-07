@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="runall" name="allJar">
+	<loadproperties srcFile="ant.property"/>
+    <target name="runall" >
+    	<!--only need to run once:-->
+    	<!--ant antfile="preprocess.xml" dir="${basedir}"/-->
+      
+    	<ant antfile="transformer.xml" dir="../pecan-transformer"/>
+    	<ant antfile="detect.xml" dir="."/>
+    	<copy file="./tmp/AllPatterns" todir="./tmp/${projectname}/"/>
+    	<copy file="./tmp/CSMethodPairList" todir="./tmp/${projectname}/"/>    	
+    	<ant antfile="fix.xml" dir="../../Dcon"/>    	
+    </target>
+	
+	<target name="transformer">
+		<ant antfile="transformer.xml" dir="../pecan-transformer"/>
+	</target>
+	
+	
+</project>

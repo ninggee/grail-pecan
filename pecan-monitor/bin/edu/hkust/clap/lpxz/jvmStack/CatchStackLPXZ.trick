@@ -1,0 +1,15 @@
+1 we steal the info from the host vm, and store it to files, such taht the client vm can get it.
+we use file because that this is the only way for inter-process communication.
+
+the optimization is dangerous: turn it off
+2 for efficient storing to files, I open the file once and use it forever. I close it at the final time (shutdown)
+6 order: create->write-> exist-> read. by putting new FileInput before throw, we get no handler of the file because it is not yet created.
+
+
+3 I avoid creating the stack List everytime, instead, I reuse one stack for one thread!
+
+4 note that, the hashcode or threadId are different among two vms, even for the same object or thread identity.
+Use thread.name plesae
+
+5 for safety, when analyzing the trace, make sure the first one is CatchStackLPXZ.getFullStackTrace_lpxz()(CatchStackLPXZ.java:143)
+it cannot be other methods such as Classloader.loadMethod()

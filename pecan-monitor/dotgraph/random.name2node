@@ -1,0 +1,196 @@
+name: 0
+r0 := @parameter0: java.lang.String[]
+
+
+name: 1
+r1 = "key1=Alice&key2=Bob"
+
+
+name: 10
+if $i0 <= 5 goto localFromGlobal_method = <example.Example: java.lang.Object globalLockObj>
+
+
+name: 11
+r7 = "pp2"
+
+
+name: 12
+localFromGlobal_method = <example.Example: java.lang.Object globalLockObj>
+
+
+name: 13
+exitmonitor localFromGlobal_method
+
+
+name: 14
+goto [?= $r8 = <java.lang.System: java.io.PrintStream out>]
+
+
+name: 15
+throwableLocal0 := @caughtexception
+
+
+name: 16
+exitmonitor localFromGlobal_method
+
+
+name: 17
+throw throwableLocal0
+
+
+name: 18
+$r8 = <java.lang.System: java.io.PrintStream out>
+
+
+name: 19
+virtualinvoke $r8.<java.io.PrintStream: void println(java.lang.String)>(r7)
+
+
+name: 2
+$r6 = new example.URLParse
+
+
+name: 20
+$r9 = new example.ExampleThread
+
+
+name: 21
+specialinvoke $r9.<example.ExampleThread: void <init>(example.URLParse,java.lang.String)>(r2, "key1")
+
+
+name: 22
+r3 = $r9
+
+
+name: 23
+$r10 = new example.ExampleThread
+
+
+name: 24
+specialinvoke $r10.<example.ExampleThread: void <init>(example.URLParse,java.lang.String)>(r2, "key2")
+
+
+name: 25
+r4 = $r10
+
+
+name: 26
+$r11 = <java.lang.System: java.io.PrintStream out>
+
+
+name: 27
+$r12 = new java.lang.StringBuilder
+
+
+name: 28
+specialinvoke $r12.<java.lang.StringBuilder: void <init>(java.lang.String)>("before parsing: ")
+
+
+name: 29
+$r13 = virtualinvoke r2.<example.URLParse: java.lang.String getURL()>()
+
+
+name: 3
+specialinvoke $r6.<example.URLParse: void <init>(java.lang.String)>(r1)
+
+
+name: 30
+$r14 = virtualinvoke $r12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r13)
+
+
+name: 31
+$r15 = virtualinvoke $r14.<java.lang.StringBuilder: java.lang.String toString()>()
+
+
+name: 32
+virtualinvoke $r11.<java.io.PrintStream: void println(java.lang.String)>($r15)
+
+
+name: 33
+virtualinvoke r4.<java.lang.Thread: void start()>()
+
+
+name: 34
+virtualinvoke r3.<java.lang.Thread: void start()>()
+
+
+name: 35
+virtualinvoke r3.<java.lang.Thread: void join()>()
+
+
+name: 36
+virtualinvoke r4.<java.lang.Thread: void join()>()
+
+
+name: 37
+goto [?= $r17 = <java.lang.System: java.io.PrintStream out>]
+
+
+name: 38
+$r16 := @caughtexception
+
+
+name: 39
+r5 = $r16
+
+
+name: 4
+r2 = $r6
+
+
+name: 40
+virtualinvoke r5.<java.lang.InterruptedException: void printStackTrace()>()
+
+
+name: 41
+$r17 = <java.lang.System: java.io.PrintStream out>
+
+
+name: 42
+$r18 = new java.lang.StringBuilder
+
+
+name: 43
+specialinvoke $r18.<java.lang.StringBuilder: void <init>(java.lang.String)>("after parsing: ")
+
+
+name: 44
+$r19 = virtualinvoke r2.<example.URLParse: java.lang.String getURL()>()
+
+
+name: 45
+$r20 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r19)
+
+
+name: 46
+$r21 = virtualinvoke $r20.<java.lang.StringBuilder: java.lang.String toString()>()
+
+
+name: 47
+virtualinvoke $r17.<java.io.PrintStream: void println(java.lang.String)>($r21)
+
+
+name: 48
+return
+
+
+name: 5
+n0 = null
+
+
+name: 6
+localFromGlobal_method = <example.Example: java.lang.Object globalLockObj>
+
+
+name: 7
+entermonitor localFromGlobal_method
+
+
+name: 8
+r7 = "pp1"
+
+
+name: 9
+$i0 = virtualinvoke r1.<java.lang.String: int length()>()
+
+

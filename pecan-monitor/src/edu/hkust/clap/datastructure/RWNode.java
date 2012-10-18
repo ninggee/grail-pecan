@@ -216,18 +216,18 @@ public class RWNode extends AbstractNode
 //		
 		String ctxt_lp = "";
 		
-         for (int i= MCPairList.size()-1; i >=0 ; i--)
-         {
-//        	 if(stes.get(i) ==null) 
+//         for (int i= MCPairList.size()-1; i >=0 ; i--)
+//         {
+////        	 if(stes.get(i) ==null) 
+////        	 {
+////        		 ctxt_lp = ctxt_lp + "" + "null" + "\n";
+////        	 }
+////        	 else 
 //        	 {
-//        		 ctxt_lp = ctxt_lp + "" + "null" + "\n";
-//        	 }
-//        	 else 
-        	 {
-        		 ctxt_lp = ctxt_lp + "" + MCPairList.get(i).toString() + "\n";
-			}
-        	
-         }
+//        		 ctxt_lp = ctxt_lp + "" + MCPairList.get(i).toString() + "\n";
+//			}
+//        	
+//         }
          
           
 	      

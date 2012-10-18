@@ -12,16 +12,17 @@ import java.util.Properties;
 
 
 public class PropertyManager {
-     public static boolean proceed2Grail = false;
-	public static boolean noCtxtForbug= true;
+    
 	
+	public static boolean usePostStack = false;
+	public static boolean useasmStack = true;
 	public static Properties props ;
 	static{
 		props = loadProperties("/home/lpxz/eclipse/workspace/APIDesigner/properties");
 	}
 	
 	//must set the project name, always
-	public static String projectname = System.getProperty("projectname");
+	public static String projectname =  System.getProperty("projectname");
 	
 	
 	
@@ -45,11 +46,11 @@ public class PropertyManager {
 	}
 
 
-	public static boolean useasmStack = true;
+	//public static boolean useContext4InterestingMethod= true;// try it
     // ant cannot recognize the current project properly when being invoked in a different project.
 	public static String SystemUserDir = "/home/lpxz/eclipse/workspace/pecan/pecan-monitor";
 	
-	public static boolean useContext4InterestingMethod= false;// try it
+	
 	public static boolean allAreInteresting = true;
 	public static boolean saveAllPatterns = true;
 	public static boolean reportTime = true;

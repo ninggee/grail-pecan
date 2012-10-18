@@ -30,7 +30,7 @@ import edu.hkust.clap.lpxz.context.ContextValueManager;
 
 public class Monitor 
 {
-   static	boolean  debug = false;
+  
 	public static int VECARRAYSIZE = 500;
 	private static int objectIndexCounter = 500;
 	
@@ -145,9 +145,7 @@ public class Monitor
 //				new HashSet<Integer>(getCurrentThreadLockSet()),new HashSet<AbstractNode>(),new HashSet<AbstractNode>());
     	MessageNode startNode = new MessageNode(
 				id,threadId,AbstractNode.TYPE.SEND);
-    	if(debug)
-          System.out.println("MessageNode startNode = new MessageNode("+ id+ ","
-        		+ threadId+ ",AbstractNode.TYPE.SEND);");
+    	
     	
     	mondata.addToTrace(startNode);
 		threadToStartNode.put(t,startNode);
@@ -175,10 +173,7 @@ public class Monitor
     	
     	MessageNode newNode = new MessageNode(
 				id,threadId,AbstractNode.TYPE.RECEIVE); 
-    	if(debug)
-    	{
-    		System.out.println("MessageNode newNode = new MessageNode("+id+","+threadId+",AbstractNode.TYPE.RECEIVE);");
-    	}
+    	
     	  
     	  
 		mondata.addToTrace(newNode);
@@ -203,10 +198,7 @@ public class Monitor
     	MessageNode exitNode = new MessageNode(
 				id,threadId,AbstractNode.TYPE.SEND);
     	
-    	if(debug)
-    	{
-    		System.out.println("MessageNode exitNode = new MessageNode("+id+"," +threadId+",AbstractNode.TYPE.SEND);");
-    	}
+
     	 
 		mondata.addToTrace(exitNode);
 		
@@ -223,10 +215,7 @@ public class Monitor
 
     	MessageNode newNode = new MessageNode(
 				id,threadId,AbstractNode.TYPE.RECEIVE);
-    	if(debug)
-    	{
-    		System.out.println("MessageNode newNode = new MessageNode("+id+"," + threadId+",AbstractNode.TYPE.RECEIVE);");
-    	}
+    	
     	 
 		
 		mondata.addToTrace(newNode);
@@ -250,10 +239,7 @@ public class Monitor
     	MessageNode newNode = new MessageNode(
 				id,threadId,AbstractNode.TYPE.RECEIVE);
         
-		if(debug)
-		{
-			System.out.print("is this used at all?");
-		}
+		
 		mondata.addToTrace(newNode);
 
 		MessageNode node = indexToDeterminNode.get(id);
@@ -274,10 +260,7 @@ public class Monitor
     	MessageNode newNode = new MessageNode(
 				id,threadId,AbstractNode.TYPE.SEND);
         
-		if(debug)
-		{
-			System.out.print("is this used at all?");
-		}
+		
 		mondata.addToTrace(newNode);
 		
 		indexToDeterminNode.put(id,newNode);
@@ -294,10 +277,7 @@ public class Monitor
     	MessageNode newNode = new MessageNode(
 				id,threadId,AbstractNode.TYPE.SEND);
         
-		if(debug)
-		{
-			System.out.print("is this used at all?");
-		}
+		
 		mondata.addToTrace(newNode);
 		
 		indexToDeterminNode.put(id,newNode);
@@ -359,10 +339,7 @@ public class Monitor
    	 	LockNode newNode = new LockNode(
 					id,threadId,AbstractNode.TYPE.LOCK);
         
-		if(debug)
-		{
-			System.out.println("LockNode newNode = new LockNode("+id+","+threadId+",AbstractNode.TYPE.LOCK);");
-		}
+		
 		LockNode lockDepNode = lockDepMap.get(id);
 		newNode.setDepNode(lockDepNode);
 			mondata.addToTrace(newNode);
@@ -388,10 +365,7 @@ public class Monitor
         	
 			LockNode newNode = new LockNode(id,threadId,AbstractNode.TYPE.LOCK);
 			
-			if(debug)
-			{
-				System.out.println("LockNode newNode = new LockNode("+id+","+threadId+",AbstractNode.TYPE.LOCK);");
-			}
+			
 			
 			LockNode lockDepNode = lockDepMap.get(id);
 			newNode.setDepNode(lockDepNode);
@@ -415,10 +389,7 @@ public class Monitor
 
    	 	LockNode newNode = new LockNode(
 					id,threadId,AbstractNode.TYPE.UNLOCK);
-		if(debug)
-		{
-			System.out.println("LockNode newNode = new LockNode("+id+","+threadId+",AbstractNode.TYPE.UNLOCK);");
-		}
+		
 		lockDepMap.put(id,newNode);
 
 			mondata.addToTrace(newNode);
@@ -443,10 +414,7 @@ public class Monitor
 //					new HashSet<Integer>(getCurrentThreadLockSet()),new HashSet<AbstractNode>(),new HashSet<AbstractNode>());
 		
     		LockNode newNode = new LockNode(id,threadId,AbstractNode.TYPE.UNLOCK);
-    		if(debug)
-			{
-				System.out.print("LockNode newNode = new LockNode("+id+", " +threadId+",AbstractNode.TYPE.UNLOCK);");
-			}
+    		
 			lockDepMap.put(id,newNode);
 			
 			mondata.addToTrace(newNode);
@@ -463,21 +431,19 @@ public class Monitor
     // for the topmost method, it is sometimes hard to telle the signature as line no is not there, BUT, we have it attached as an argument here:
     public synchronized static void enterNonPrivateMethodAfter(int methoId, long threadId, String msubsig) 
     {
-    	if(debug)
- 		{
- 			System.out.println("enter: " + msubsig);
- 		}
+    	
     //  ContextValueManager.invalidifyContextValueCache(Thread.currentThread());
 
       //System.out.println(msubsig);
       //
-  //   	MethodNode newNode = new MethodNode(methoId,threadId,AbstractNode.TYPE.ENTRY,false, msubsig);
-//    //	System.out.println("enter:" + newNode.getAppSTE().getmsig());
-////    	if(threadId>35)
-////		{
-////    		System.out.println(threadId + " entering" + newNode.appSTE);
-////		}
-//		mondata.addToTrace(newNode);
+    	if(PropertyManager.usePostStack)// help me
+    	{
+        	MethodNode newNode = new MethodNode(methoId,threadId,AbstractNode.TYPE.ENTRY,false, msubsig);
+        	mondata.addToTrace(newNode);
+    	}
+
+
+		
     }
     
 	/**
@@ -486,11 +452,12 @@ public class Monitor
 	 */
     public synchronized static void enterPrivateMethodAfter(int methoId, long threadId, String msubsig) 
     {
+    	if(PropertyManager.usePostStack)// help me
+    	{
+    		MethodNode newNode = new MethodNode(methoId,threadId,AbstractNode.TYPE.ENTRY,true, msubsig);
+    		mondata.addToTrace(newNode);
+    	}
     	
-    	if(debug)
- 		{
- 			System.out.println("enter: " + msubsig);
- 		}
   //  	 ContextValueManager.invalidifyContextValueCache(Thread.currentThread());
 
 //    	MethodNode newNode = new MethodNode(methoId,threadId,AbstractNode.TYPE.ENTRY,true, msubsig);
@@ -503,10 +470,11 @@ public class Monitor
     }
     public synchronized static void exitNonPrivateMethodBefore(int methoId, long threadId, String msubsig) 
     {    			
-    	if(debug)
- 		{
- 			System.out.println("exit: " + msubsig);
- 		}
+    	if(PropertyManager.usePostStack)// help me
+    	{
+    		MethodNode newNode = new MethodNode(methoId,threadId,AbstractNode.TYPE.EXIT,false, msubsig);
+    		mondata.addToTrace(newNode);
+    	}
     //	ContextValueManager.invalidifyContextValueCache(Thread.currentThread()); // change context scope
     	
 
@@ -525,10 +493,11 @@ public class Monitor
 
     public synchronized static void exitPrivateMethodBefore(int methoId, long threadId,String msubsig) 
     {
-    	if(debug)
- 		{
- 			System.out.println("exit: " + msubsig);
- 		}
+    	if(PropertyManager.usePostStack)// help me
+    	{
+    		MethodNode newNode = new MethodNode(methoId,threadId,AbstractNode.TYPE.EXIT,true,msubsig);
+    		mondata.addToTrace(newNode);
+    	}
     //	ContextValueManager.invalidifyContextValueCache(Thread.currentThread()); // change context scope
 
     			
@@ -593,10 +562,7 @@ public class Monitor
 //	 				new HashSet<Integer>(getCurrentThreadLockSet()),new HashSet<AbstractNode>(),new HashSet<AbstractNode>());
     	     	
     		 LockNode newNode = new LockNode(id,threadId,AbstractNode.TYPE.LOCK);
-	 		if(debug)
-	 		{
-	 			System.out.println("LockNode newNode = new LockNode("+id+","+threadId+",AbstractNode.TYPE.LOCK);");
-	 		}
+	 		
     		 
  			LockNode lockDepNode = lockDepMap.get(id);
 			newNode.setDepNode(lockDepNode);
@@ -618,11 +584,7 @@ public class Monitor
 //	 				new HashSet<Integer>(getCurrentThreadLockSet()),new HashSet<AbstractNode>(),new HashSet<AbstractNode>());
 //			
     		LockNode newNode = new LockNode(id,threadId,AbstractNode.TYPE.UNLOCK);
-    		if(debug)
-    		{
-    			System.out.println("LockNode newNode = new LockNode("+id+","+threadId+",AbstractNode.TYPE.UNLOCK);");
-    		}
-			
+    		
 			lockDepMap.put(id,newNode);
 
     		mondata.addToTrace(newNode);
@@ -643,10 +605,7 @@ public class Monitor
 //	 				new HashSet<Integer>(getCurrentThreadLockSet()),new HashSet<AbstractNode>(),new HashSet<AbstractNode>());
 //			
     		LockNode newNode = new LockNode(id,threadId,AbstractNode.TYPE.LOCK);
-    		if(debug)
-    		{
-               System.out.println("LockNode newNode = new LockNode("+id+","+threadId+",AbstractNode.TYPE.LOCK);");
-    		}
+    		
 
 		    	
 			LockNode lockDepNode = lockDepMap.get(id);
@@ -668,10 +627,7 @@ public class Monitor
 //	 				new HashSet<Integer>(getCurrentThreadLockSet()),new HashSet<AbstractNode>(),new HashSet<AbstractNode>());
 
     		LockNode newNode = new LockNode(id,threadId,AbstractNode.TYPE.UNLOCK);
-    		if(debug)
-    		{
-               System.out.println("LockNode newNode = new LockNode("+id+","+threadId+",AbstractNode.TYPE.UNLOCK);");
-    		}
+    		
 			lockDepMap.put(id,newNode);
 
 			
@@ -836,15 +792,12 @@ public class Monitor
 		newNode.setNewMem(rtID4each);// set for the jeff's violation, I remove the invocation there.
 		newNode.setMemString(getName4RWNode(iid));		
 		newNode.setMsig(msig);
-		newNode.setJcode(jcode+ rtID4each);
+		newNode.setJcode(jcode);
 		
-		if(debug)
-		{
-         //  System.out.println("RWNode newNode = new RWNode("+line+","+rtID4each+","+threadId+",AbstractNode.TYPE.READ);");
-		}
+		
 		
 		//<spec.jbb.ResFilter: boolean accept(java.io.File,java.lang.String)>
-		 if(PropertyManager.useContext4InterestingMethod )
+		 if(PropertyManager.useasmStack    )
 		 {
 			 if(PropertyManager.isInteresting(msig))
 				{
@@ -878,15 +831,12 @@ public class Monitor
 		newNode.setNewMem(rtID4each);// set for the jeff's violation, I remove the invocation there.
 		newNode.setMemString(getName4RWNode(iid));
 		newNode.setMsig(msig);
-		newNode.setJcode(jcode+ rtID4each);
+		newNode.setJcode(jcode);
 		
 		
-		if(debug)
-		{
-        //   System.out.println("RWNode newNode = new RWNode("+line+","+rtID4each+","+threadId+",AbstractNode.TYPE.WRITE)");
-		}
 		
-		 if(PropertyManager.useContext4InterestingMethod )
+		
+		 if(PropertyManager.useasmStack )
 		 {
 			 if(PropertyManager.isInteresting(msig))
 				{
@@ -915,15 +865,12 @@ public class Monitor
     	newNode.setNewMem(rtID4each);// set for the jeff's violation, I remove the invocation there.
     	newNode.setMemString(getName4RWNode(iid));
     	newNode.setMsig(msig);
-    	newNode.setJcode(jcode+ rtID4each);
+    	newNode.setJcode(jcode);
 		
 		
-		if(debug)
-		{
-        //   System.out.println("RWNode newNode = new RWNode("+line+","+rtID4each+","+threadId+",AbstractNode.TYPE.READ);");
-		}
 		
-		 if(PropertyManager.useContext4InterestingMethod )
+		
+    	 if(PropertyManager.useasmStack   )
 		 {
 			 if(PropertyManager.isInteresting(msig))
 				{
@@ -951,13 +898,9 @@ public class Monitor
     	newNode.setNewMem(rtID4each);// set for the jeff's violation, I remove the invocation there.
     	newNode.setMemString(getName4RWNode(iid));
     	newNode.setMsig(msig);
-    	newNode.setJcode(jcode+ rtID4each);
-		if(debug)
-		{
-         //  System.out.println("RWNode newNode = new RWNode("+line+","+rtID4each+","+threadId+",AbstractNode.TYPE.WRITE);");
-		}
+    	newNode.setJcode(jcode);
 		
-		if(PropertyManager.useContext4InterestingMethod )
+    	 if(PropertyManager.useasmStack )
 		 {
 			 if(PropertyManager.isInteresting(msig))
 				{

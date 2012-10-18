@@ -202,9 +202,6 @@ public class OrganizeResults {
 		ret.setMsig((rv_list.get(rv_list.size()-1)).curMsig);
         ret.setrAnc(rnode.getJcode());
         ret.setrAncLine(rnode.getLine());
-//        System.out.println("RMethod: " + ret.getMsig());
-//        System.out.println("rAnc: " + ret.getrAnc());
-        
         
         //correctness checking:
         SootMethod sm = Scene.v().getMethod(ret.getMsig());
@@ -212,8 +209,8 @@ public class OrganizeResults {
        Body bb = sm.getActiveBody();
        if(!bb.toString().contains(rnode.getJcode()))// coorec
        {
-    	   System.err.println(rnode.getJcode() + "  " + rnode.getMsig());
-    	   System.out.println(bb.toString());
+    	   System.err.println(rnode.getMsig());
+    	   System.out.println(ret.getMsig());
     	   throw new RuntimeException("fatal");
        }
 

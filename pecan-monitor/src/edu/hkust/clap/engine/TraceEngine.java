@@ -146,7 +146,7 @@ public class TraceEngine
 		}
 		accessvec = computeInstanceAccessVec();
 		//==========check method pairing:
-		if(!PropertyManager.noCtxtForbug)
+		if(PropertyManager.usePostStack)
 		{
 			HashMap<Long, Stack> tid2stack = new  HashMap<Long, Stack>();
 			
@@ -451,8 +451,8 @@ public class TraceEngine
 							{							    	    				
 			    				
 								if(I<K&&R<J)
-			    				{
-			    	    			showRealPattern(p);
+			    				{ //lp: data race
+			    	    			//showRealPattern(p);
 			    				}
 			    				else 
 			    				{		
@@ -974,7 +974,7 @@ public class TraceEngine
 	    	realPatternNumber++;
 	    	//CommonUtil.print("\n*** Real Pattern ***"+p.printToString());
 	    	CommonUtil.print("\n*** Real Pattern ***");
-	    	printDetails(p);
+	    	//printDetails(p);
 		}
 		
 	    public void showAllPatterns()
@@ -1363,9 +1363,8 @@ public class TraceEngine
     		
    		if(node instanceof MethodNode)
     		{
-    			if(!PropertyManager.noCtxtForbug)
-    		   {
-    				if(!PropertyManager.useasmStack)
+    			
+    				if(PropertyManager.usePostStack)
     	    		{   // update the  stack of  current thread
     	    			// manually maintain the context for RWnode!
     	    			List<MethodItsCallSiteLineTuple> curCtxt  = threadCurrentContext_lp.get(threadId);    	        		
@@ -1388,7 +1387,7 @@ public class TraceEngine
         				} 	
     	    		}
     		    	
-    		    }
+    		   
     					
     			maintrace.remove(k);    			
     			k--;
@@ -1415,16 +1414,15 @@ public class TraceEngine
 	        			RWNode rwnode = (RWNode)node;
 	        			
 	        			//rwnode.setContext(context);
-	        			if(!PropertyManager.noCtxtForbug)
-	        			 {// use the stack of the current thread
-	        				if(!PropertyManager.useasmStack)
+	        			
+	        				if(PropertyManager.usePostStack)
 	        	    		{
 	        	    			// manually maintain the context for RWnode!
 	        	    			List<MethodItsCallSiteLineTuple> curCtxt  = threadCurrentContext_lp.get(threadId);        	        		
 	        	        		rwnode.setMCPairList_deepClone(curCtxt);
 	        	    		}
 	        					
-	        			  }
+	        			  
 	        			rwnode.setAtomIndex(atomIndex);
 	        		}
         		}
@@ -1460,16 +1458,15 @@ public class TraceEngine
 	        		{
 	        			RWNode rwnode = (RWNode)node;
 	        			
-	        			if(!PropertyManager.noCtxtForbug)
-	        			 {
-	        				if(!PropertyManager.useasmStack)
+	        			
+	        				if(!PropertyManager.usePostStack)
 	        	    		{
 	        	    			// manually maintain the context for RWnode!
 	        	    			List<MethodItsCallSiteLineTuple> curCtxt  = threadCurrentContext_lp.get(threadId);         	        		
 	        	        		rwnode.setMCPairList_deepClone(curCtxt);
 	        	    		}
 	        					
-	        			  }	
+	        			  
 	        			if(!vecatom.isEmpty())
 	        				rwnode.setAtomIndex(atomIndex);
 	        		}
@@ -2460,6 +2457,8 @@ public class TraceEngine
 				System.out.println(accessvec[i].get(j));
 			}
 	    }
+	    
+	    //@depreciated
 //        public static void loadNorganizePatterns()
 //        {
 //        	List loadedPatterns = (List) SaveLoad.load(SaveLoad.default_AllPatterns);
@@ -2500,6 +2499,7 @@ public class TraceEngine
 //	    	// save list! here
 //	    	SaveLoad.save(list, SaveLoad.default_filename);
 //        }
+	  //@depreciated
 //		public void organizePatterns() {
 //			System.err.println("Remeber to set the SootAgent.origAnalyzedFolder (the original one, not sootified), I need the lineNO!");
 //		//	SootAgent.origAnalyzedFolder ="/home/lpxz/eclipse/workspace/openjms/bin";
@@ -2555,7 +2555,7 @@ public class TraceEngine
 	    		{
 		    		Pattern p = patternsIt.next();
 		    		//System.out.println(p.toString());
-		    		printDetails(p);
+		    	//	printDetails(p);
 		    		if(p instanceof TypeOnePattern || p instanceof TypeTwoPattern)
 		    		{
 		    			PatternI patternI = (PatternI) p;
@@ -2569,97 +2569,58 @@ public class TraceEngine
 	    	List<CSMethodPair> CSmethodPairs = new ArrayList<CSMethodPair>();
 
 	    	ContextValueManager.ctxts = this.monitorData.ctxts;
-	    	if(PropertyManager.proceed2Grail)
+	    	
+	    	
+    		if(PropertyManager.useasmStack)
 	    	{
-	    		if(PropertyManager.useasmStack)
-		    	{
-		    		SootAgent4Pecan.sootLoadNecessary(list);
+	    		SootAgent4Pecan.sootLoadNecessary(list);
 
-			    	Iterator<Pattern> patternsIt = list.iterator();
-					int pid  = 0;
-			    		while(patternsIt.hasNext())
+		    	Iterator<Pattern> patternsIt = list.iterator();
+				int pid  = 0;
+		    		while(patternsIt.hasNext())
+		    		{
+			    		Pattern p = patternsIt.next();
+	                    pid++;
+			    		if(p instanceof TypeOnePattern || p instanceof TypeTwoPattern)
 			    		{
-				    		Pattern p = patternsIt.next();
-		                    pid++;
-				    		if(p instanceof TypeOnePattern || p instanceof TypeTwoPattern)
-				    		{
-				    			PatternI patternI = (PatternI) p;	    		
-				    			System.err.println("pattern: " + pid);
-
+			    			PatternI patternI = (PatternI) p;	  
+			    			
+			    			System.err.println("pattern: " + pid);
+			    			{
+				    			RWNode pnode  = patternI.getNodeI();
+				    			RWNode rnode = patternI.getNodeK();
+				    			RWNode cnode = patternI.getNodeJ();
+				    			
+				    			
+								
+				    			// need the context of RWnode now:
+				    			CSMethod csMethod_pc =OrganizeResults.pc2csMethod(pnode, cnode);
+				    			CSMethod csMethod_r  =OrganizeResults.r2csMethod(rnode);
+				    			CSMethodPair pair = new CSMethodPair(csMethod_pc, csMethod_r);
+				    			// for statistic
 				    			{
-					    			RWNode pnode  = patternI.getNodeI();
-					    			RWNode rnode = patternI.getNodeK();
-					    			RWNode cnode = patternI.getNodeJ();
-					    			// need the context of RWnode now:
-					    			CSMethod csMethod_pc =OrganizeResults.pc2csMethod(pnode, cnode);
-					    			CSMethod csMethod_r  =OrganizeResults.r2csMethod(rnode);
-					    			CSMethodPair pair = new CSMethodPair(csMethod_pc, csMethod_r);
-					    			
-					    			//CommonUtil.print("\n"+p.printToString());
-					    			//System.out.println("\n"+p.printToString());// CAN NOT MOVE ABOVE, THE NODE NEEDS SOME INITIALIZATION ABOVE
-					    			
-					    			CSmethodPairs.add(pair);	
+				    				numOfBugs++;
+					    			pcrStrings.add(csMethod_pc.getMsig() + csMethod_pc.getpAnc() + csMethod_pc.getcAnc() + csMethod_r.getMsig() + csMethod_r.getrAnc());
 				    			}
 				    			
-			    			
-				    		}
-				    		
-				    		
-				    		
-			    		}
-
-			    	SaveLoad.save(CSmethodPairs, SaveLoad.default_filename );	    	
-			    	SootAgent4Pecan.sootDestroyNecessary();
-		    	}
-		    	else { // for LLVM
-		    		HashMap<Long,Integer> objectMemMap= (HashMap<Long,Integer>) SaveLoad.load(SaveLoad.objectmap_filename);
-		    		Iterator<Pattern> patternsIt = list.iterator();
-					int pid  = 0;
-			    		while(patternsIt.hasNext())
-			    		{
-				    		Pattern p = patternsIt.next();
-		                    pid++;
-				    		if(p instanceof TypeOnePattern || p instanceof TypeTwoPattern)
-				    		{
-				    			PatternI patternI = (PatternI) p;	    		
-				    			System.out.println("pattern: " + pid);
-
-				    			{
-					    			RWNode pnode  = patternI.getNodeI();
-					    			RWNode rnode = patternI.getNodeK();
-					    			RWNode cnode = patternI.getNodeJ();
-					    			
-				
-					    		
-					    		    System.out.println("P");
-					    		    printLLVM4Node(pnode ,objectMemMap);
-					    		    System.out.println("C");
-					    		    printLLVM4Node(cnode ,objectMemMap);
-					    		    System.out.println("R");
-					    		    printLLVM4Node(rnode ,objectMemMap);
-					    		    
-					    		
-					    			
-			
-					    			
-					    			// to computed by HK.
-//					    			CSMethod csMethod_pc =OrganizeResults.pc2csMethod(pnode, cnode);
-//					    			CSMethod csMethod_r  =OrganizeResults.r2csMethod(rnode);				    			
-//					    			CSMethodPair pair = new CSMethodPair(csMethod_pc, csMethod_r);
-//					    	        CSmethodPairs.add(pair);	
-				    			}
+				    			//CommonUtil.print("\n"+p.printToString());
+				    			//System.out.println("\n"+p.printToString());// CAN NOT MOVE ABOVE, THE NODE NEEDS SOME INITIALIZATION ABOVE
 				    			
+				    			CSmethodPairs.add(pair);	
+			    			}
 			    			
-				    		}
-				    		
-				    		
-				    		
+		    			
 			    		}
+			    		
+			    		
+			    		
+		    		}
 
-			    	    	
-			    	
-				}
+		    	SaveLoad.save(CSmethodPairs, SaveLoad.default_filename );	    	
+		    	SootAgent4Pecan.sootDestroyNecessary();
 	    	}
+		    	
+	    	
 	    	
 	    	
 		}
@@ -2718,8 +2679,7 @@ public class TraceEngine
 			
 			//if(pNode.msig!= cNode.msig) // API designer
 			{
-				numOfBugs++;
-				pcrStrings.add(pNode.msig + " " + cNode.msig+ " " + rNode.msig);
+				
 				System.out.println(aboutP);
 				System.out.println(" \n");
 				System.out.println(aboutC);

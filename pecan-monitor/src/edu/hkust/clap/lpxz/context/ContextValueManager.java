@@ -303,8 +303,10 @@ public class ContextValueManager {
 		   // the following is for human readability, remember that we will print some readable info for each RWnode at last.
 		   pnode.setMCPairList_deepClone(pv_list);
 		}
-		else {
-			pv_list.addAll(pnode.getMCPairList()); // for HK llvm
+		else if(PropertyManager.usePostStack){
+			pv_list.addAll(pnode.getMCPairList()); // 
+		}else {
+			throw new RuntimeException("seems you are not providing any contexts");
 		}
 		
 		

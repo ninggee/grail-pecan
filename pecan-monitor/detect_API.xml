@@ -61,7 +61,7 @@
    
     <target name="EngineMain2">
         <java classname="edu.hkust.clap.engine.EngineMain2" failonerror="true" fork="yes">
-        	 <jvmarg line="-Xmx12g"/>            
+        	 <jvmarg line="-Xmx2g"/>            
             <classpath refid="pecan-monitor.classpath"/>
         	 <classpath refid="${projectname}.classpath"/>
         </java>
@@ -70,7 +70,7 @@
 
     <target name="EngineMain">
         <java classname="edu.hkust.clap.engine.EngineMain" failonerror="true" fork="yes">
-            <jvmarg line="-Xmx12g"/>   
+            <jvmarg line="-Xmx2g"/>   
         	 <sysproperty key="projectname" value="${projectname}"/>        
             <classpath refid="pecan-monitor.classpath"/>
         	 <classpath refid="${projectname}.classpath"/>
@@ -216,7 +216,7 @@
     <target name="monitor">
     	<echo message="load instrumented classes from folder: ${pecantrans.location}/tmp/runtime/${projectname}"/>
         <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">
-        	 <jvmarg line="-noverify -Xmx12g"/>  
+        	 <jvmarg line="-noverify -Xmx2g"/>  
         	 <sysproperty key="projectname" value="${projectname}"/>        
         	<classpath>
         	      <pathelement path="${pecanmonitor.location}/bin"/>  

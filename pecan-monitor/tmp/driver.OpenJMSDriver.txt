@@ -2,20 +2,1010 @@
 *** Violation Patterns [ID - Memory Location - Line Number - Thread - Access Type] ***
 
 --------------------------------------
-total time (msec): 1560
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.PooledExecutor.poolSize_" --- 8045 468 33 READ msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int getPoolSize()> jcode:$i0 = r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> ctxt:
+ * 7431 354 27 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: void <init>(EDU.oswego.cs.dl.util.concurrent.Channel,int)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> = 0 ctxt:
+ * 8046 468 33 READ msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int getPoolSize()> jcode:$i0 = r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.PooledExecutor.poolSize_" --- 8047 477 33 READ msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: void addThread(java.lang.Runnable)> jcode:$i0 = r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> ctxt:
+ * 7431 354 27 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: void <init>(EDU.oswego.cs.dl.util.concurrent.Channel,int)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> = 0 ctxt:
+ * 8048 477 33 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: void addThread(java.lang.Runnable)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> = $i1 ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.PooledExecutor.poolSize_" --- 8045 468 33 READ msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int getPoolSize()> jcode:$i0 = r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> ctxt:
+ * 7431 354 27 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: void <init>(EDU.oswego.cs.dl.util.concurrent.Channel,int)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> = 0 ctxt:
+ * 8048 477 33 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: void addThread(java.lang.Runnable)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.PooledExecutor: int poolSize_> = $i1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.Multiplexer._closed" --- 27756 332 25 READ msig:<org.exolab.jms.net.multiplexer.Multiplexer: void close()> jcode:$z0 = r0.<org.exolab.jms.net.multiplexer.Multiplexer: boolean _closed> ctxt:
+ * 27776 590 28 WRITE msig:<org.exolab.jms.net.multiplexer.Multiplexer: void shutdown()> jcode:r0.<org.exolab.jms.net.multiplexer.Multiplexer: boolean _closed> = 1 ctxt:
+ * 27757 333 25 WRITE msig:<org.exolab.jms.net.multiplexer.Multiplexer: void close()> jcode:r0.<org.exolab.jms.net.multiplexer.Multiplexer: boolean _closed> = 1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.Multiplexer._closed" --- 6984 800 22 READ msig:<org.exolab.jms.net.multiplexer.Multiplexer: int getNextChannelId()> jcode:$z2 = r0.<org.exolab.jms.net.multiplexer.Multiplexer: boolean _closed> ctxt:
+ * 12407 590 23 WRITE msig:<org.exolab.jms.net.multiplexer.Multiplexer: void shutdown()> jcode:r0.<org.exolab.jms.net.multiplexer.Multiplexer: boolean _closed> = 1 ctxt:
+ * 6988 807 22 READ msig:<org.exolab.jms.net.multiplexer.Multiplexer: int getNextChannelId()> jcode:$z3 = r0.<org.exolab.jms.net.multiplexer.Multiplexer: boolean _closed> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.connector.ManagedConnectionHandle._connectionCount" --- 12589 273 19 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:$i0 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ * 12341 78 20 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void <init>(org.exolab.jms.net.connector.DefaultConnectionPool,org.exolab.jms.net.connector.ManagedConnection,org.exolab.jms.net.connector.ConnectionFactory)> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = 0 ctxt:
+ * 12590 273 19 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.connector.ManagedConnectionHandle._connectionCount" --- 33384 273 21 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:$i0 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ * 33653 280 19 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ * 33599 280 21 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.connector.ManagedConnectionHandle._connectionCount" --- 33385 273 21 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ * 33654 281 19 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:$i2 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ * 33599 280 21 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.connector.ManagedConnectionHandle._connectionCount" --- 33384 273 21 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:$i0 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ * 33653 280 19 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ * 33600 281 21 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:$i2 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.connector.ManagedConnectionHandle._connectionCount" --- 33384 273 21 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:$i0 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ * 12590 273 19 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ * 33599 280 21 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.connector.ManagedConnectionHandle._connectionCount" --- 33384 273 21 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:$i0 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ * 12590 273 19 WRITE msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void incActiveConnections()> jcode:r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> = $i1 ctxt:
+ * 33600 281 21 READ msig:<org.exolab.jms.net.connector.ManagedConnectionHandle: void decActiveConnections()> jcode:$i2 = r0.<org.exolab.jms.net.connector.ManagedConnectionHandle: int _connectionCount> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8219 191 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8760 164 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8219 191 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8761 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8218 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8759 163 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8218 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8760 164 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 12445 163 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8728 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 12445 163 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8728 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 12446 164 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 12446 164 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8728 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8216 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8761 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8216 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8760 164 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8218 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8761 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8728 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 12445 163 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8761 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8220 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12446 164 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8761 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8728 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 12446 164 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8761 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30192 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30352 163 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8220 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12445 163 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8761 172 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8219 191 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8759 163 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8216 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8759 163 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30192 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30353 164 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12926 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65811 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30223 191 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30284 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 12445 163 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8220 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8220 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12446 164 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8592 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30223 191 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30353 164 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30331 172 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30353 164 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30190 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30286 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12928 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65881 172 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8219 191 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8590 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 12446 164 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8220 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 65855 172 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 12928 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65881 172 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12928 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65811 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30223 191 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30286 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8216 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8590 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30190 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30284 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30299 163 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30352 163 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30190 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30353 164 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8216 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8588 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8216 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8592 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30190 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30354 172 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8218 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8588 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30190 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30288 191 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8220 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12445 163 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8592 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30223 191 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30352 163 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30331 172 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30352 163 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30192 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30288 191 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30300 164 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30353 164 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30223 191 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30288 191 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12926 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65881 172 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8219 191 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8588 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30190 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30352 163 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30192 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30284 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8219 191 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8592 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8218 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8590 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30223 191 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i9 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30354 172 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30192 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30286 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30300 164 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30352 163 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30331 172 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30354 172 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 8218 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 12447 172 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 8592 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 30192 190 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i8 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65772 191 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 30354 172 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 12445 163 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:i1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 8220 191 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = $i10 ctxt:
+ * 12446 164 24 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._index" --- 65855 172 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ * 12926 187 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$i7 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> ctxt:
+ * 65881 172 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _index> = 0 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 12495 2167 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r21 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12318 377 20 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = null ctxt:
+ * 12498 2169 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r25 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39436 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12310 1347 14 WRITE msig:<org.exolab.jms.net.uri.URI: void initializePath(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = $r8 ctxt:
+ * 39462 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 12496 2169 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r23 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12333 1347 20 WRITE msig:<org.exolab.jms.net.uri.URI: void initializePath(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = $r8 ctxt:
+ * 12498 2169 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r25 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39436 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12310 1347 14 WRITE msig:<org.exolab.jms.net.uri.URI: void initializePath(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = $r8 ctxt:
+ * 39461 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 12495 2167 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r21 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12333 1347 20 WRITE msig:<org.exolab.jms.net.uri.URI: void initializePath(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = $r8 ctxt:
+ * 12498 2169 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r25 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39435 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12310 1347 14 WRITE msig:<org.exolab.jms.net.uri.URI: void initializePath(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = $r8 ctxt:
+ * 39462 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39435 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12310 1347 14 WRITE msig:<org.exolab.jms.net.uri.URI: void initializePath(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = $r8 ctxt:
+ * 39461 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.uri.URI._path" --- 33554 377 21 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = null ctxt:
+ * 33624 2169 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r24 = r2.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 33559 1347 21 WRITE msig:<org.exolab.jms.net.uri.URI: void initializePath(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = $r8 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39436 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12285 377 14 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = null ctxt:
+ * 39462 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39436 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12285 377 14 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = null ctxt:
+ * 39461 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39435 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12285 377 14 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = null ctxt:
+ * 39462 1499 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r16 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 12496 2169 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r23 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12318 377 20 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = null ctxt:
+ * 12498 2169 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r25 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._path" --- 39435 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ * 12285 377 14 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> = null ctxt:
+ * 39461 1497 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r15 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _path> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.nodes_" --- 27704 127 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$r1 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 71867 91 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:$r13 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 27736 120 25 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$r15 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.nodes_" --- 27704 127 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$r1 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 71867 91 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:$r13 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 27714 105 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$r5 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.nodes_" --- 27704 127 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$r1 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 71867 91 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:$r13 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 27719 112 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$r8 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.nodes_" --- 27704 127 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$r1 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 71867 91 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:$r13 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 27734 114 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$r13 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.nodes_" --- 27704 127 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$r1 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 71867 91 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:$r13 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 27711 103 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$r3 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.nodes_" --- 27704 127 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$r1 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 71867 91 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:$r13 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ * 27726 113 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$r10 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object[] nodes_> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 30306 322 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:i0 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 65852 284 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ * 30328 284 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 31042 322 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:i0 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 27345 233 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void notifyRead(int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i1 ctxt:
+ * 31081 284 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 30305 321 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 65852 284 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ * 30328 284 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 43678 227 38 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void notifyRead(int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 12903 133 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i2 ctxt:
+ * 43679 233 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void notifyRead(int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 31041 321 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 12914 133 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i2 ctxt:
+ * 31081 284 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 31041 321 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 27345 233 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void notifyRead(int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i1 ctxt:
+ * 31081 284 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 31041 321 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 12914 133 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i2 ctxt:
+ * 31042 322 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:i0 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 31080 284 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:$i6 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 12914 133 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i2 ctxt:
+ * 31081 284 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._remoteSpace" --- 31042 322 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:i0 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> ctxt:
+ * 12914 133 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = i2 ctxt:
+ * 31081 284 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int _remoteSpace> = $i7 ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.count_" --- 27703 126 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$i0 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: int count_> ctxt:
+ * 71857 82 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Heap: int count_> = $i9 ctxt:
+ * 27710 100 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$i4 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: int count_> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Heap.count_" --- 27703 126 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object peek()> jcode:$i0 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: int count_> ctxt:
+ * 71857 82 21 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Heap: void insert(java.lang.Object)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Heap: int count_> = $i9 ctxt:
+ * 27712 104 25 READ msig:<EDU.oswego.cs.dl.util.concurrent.Heap: java.lang.Object extract()> jcode:$i5 = r0.<EDU.oswego.cs.dl.util.concurrent.Heap: int count_> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 31170 365 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ * 67827 365 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ * 31285 364 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 31169 365 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 67827 365 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ * 31288 365 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 31145 364 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 67827 365 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ * 31288 365 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 31145 364 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 35192 315 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = 0 ctxt:
+ * 33679 364 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 13767 365 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 35192 315 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = 0 ctxt:
+ * 13768 365 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 30498 365 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 12915 91 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = 0 ctxt:
+ * 30570 365 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 30497 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 12915 91 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = 0 ctxt:
+ * 30568 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 13755 364 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 35192 315 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = 0 ctxt:
+ * 13768 365 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 30497 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 12915 91 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = 0 ctxt:
+ * 30570 365 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = $i4 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._index" --- 30498 365 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i3 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ * 12915 91 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> = 0 ctxt:
+ * 30568 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _index> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5258 255 1 WRITE msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = l1 ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ * 5398 255 1 WRITE msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = l1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5258 255 1 WRITE msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = l1 ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ * 5413 238 1 READ msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:l1 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5254 238 1 READ msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:l1 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ * 5398 255 1 WRITE msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = l1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5254 238 1 READ msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:l1 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ * 5413 238 1 READ msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:l1 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5244 128 1 READ msig:<org.exolab.jms.common.uuid.Clock: long clock()> jcode:$l0 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ * 5248 128 1 READ msig:<org.exolab.jms.common.uuid.Clock: long clock()> jcode:$l0 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5244 128 1 READ msig:<org.exolab.jms.common.uuid.Clock: long clock()> jcode:$l0 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ * 5398 255 1 WRITE msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = l1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5244 128 1 READ msig:<org.exolab.jms.common.uuid.Clock: long clock()> jcode:$l0 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ * 5413 238 1 READ msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:l1 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.uuid.Clock._clock" --- 5405 212 9 READ msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:$l5 = <org.exolab.jms.common.uuid.Clock: long _clock> ctxt:
+ * 5258 255 1 WRITE msig:<org.exolab.jms.common.uuid.Clock: long synchronize()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = l1 ctxt:
+ * 5408 212 9 WRITE msig:<org.exolab.jms.common.uuid.Clock: void run()> jcode:<org.exolab.jms.common.uuid.Clock: long _clock> = $l8 ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.SynchronousChannel.item_" --- 13421 73 34 READ msig:<EDU.oswego.cs.dl.util.concurrent.SynchronousChannel: java.lang.Object extract()> jcode:r1 = r0.<EDU.oswego.cs.dl.util.concurrent.SynchronousChannel: java.lang.Object item_> ctxt:
+ * 7411 62 27 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.SynchronousChannel: void <init>()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.SynchronousChannel: java.lang.Object item_> = null ctxt:
+ * 13422 74 34 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.SynchronousChannel: java.lang.Object extract()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.SynchronousChannel: java.lang.Object item_> = null ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._type" --- 12973 281 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:$b4 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> ctxt:
+ * 65760 142 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 13045 282 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = 50 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._type" --- 65760 142 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 12973 281 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:$b4 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> ctxt:
+ * 65850 282 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = 50 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._type" --- 30188 142 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 65850 282 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = 50 ctxt:
+ * 30323 281 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:$b4 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._type" --- 30188 142 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 65850 282 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = 50 ctxt:
+ * 30326 282 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = 50 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._type" --- 30188 142 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 65760 142 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 30323 281 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:$b4 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._type" --- 30188 142 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 65760 142 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void setType(byte)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = b0 ctxt:
+ * 30326 282 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void send(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte _type> = 50 ctxt:
+ ***
+
+*** AV-II --- "EDU.oswego.cs.dl.util.concurrent.ThreadFactoryUser.threadFactory_" --- 7430 26 27 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.ThreadFactoryUser: void <init>()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.ThreadFactoryUser: EDU.oswego.cs.dl.util.concurrent.ThreadFactory threadFactory_> = $r1 ctxt:
+ * 7679 55 24 READ msig:<EDU.oswego.cs.dl.util.concurrent.ThreadFactoryUser: EDU.oswego.cs.dl.util.concurrent.ThreadFactory getThreadFactory()> jcode:$r1 = r0.<EDU.oswego.cs.dl.util.concurrent.ThreadFactoryUser: EDU.oswego.cs.dl.util.concurrent.ThreadFactory threadFactory_> ctxt:
+ * 7460 47 27 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.ThreadFactoryUser: EDU.oswego.cs.dl.util.concurrent.ThreadFactory setThreadFactory(EDU.oswego.cs.dl.util.concurrent.ThreadFactory)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.ThreadFactoryUser: EDU.oswego.cs.dl.util.concurrent.ThreadFactory threadFactory_> = r1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.security.BasicPrincipal._name" --- 12441 121 19 READ msig:<org.exolab.jms.common.security.BasicPrincipal: boolean equals(java.lang.Object)> jcode:$r3 = r0.<org.exolab.jms.common.security.BasicPrincipal: java.lang.String _name> ctxt:
+ * 6468 88 20 WRITE msig:<org.exolab.jms.common.security.BasicPrincipal: void <init>(java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.common.security.BasicPrincipal: java.lang.String _name> = r1 ctxt:
+ * 12473 121 19 READ msig:<org.exolab.jms.common.security.BasicPrincipal: boolean equals(java.lang.Object)> jcode:$r3 = r0.<org.exolab.jms.common.security.BasicPrincipal: java.lang.String _name> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexedManagedConnection._principal" --- 12439 291 19 READ msig:<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: boolean hasPrincipal(java.security.Principal)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: java.security.Principal _principal> ctxt:
+ * 6573 133 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: void <init>(java.security.Principal)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: java.security.Principal _principal> = r1 ctxt:
+ * 12440 291 19 READ msig:<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: boolean hasPrincipal(java.security.Principal)> jcode:$r3 = r0.<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: java.security.Principal _principal> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexedManagedConnection._principal" --- 46115 291 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: boolean hasPrincipal(java.security.Principal)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: java.security.Principal _principal> ctxt:
+ * 12515 170 14 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: void setInvocationHandler(org.exolab.jms.net.connector.InvocationHandler)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: java.security.Principal _principal> = $r13 ctxt:
+ * 46116 291 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: boolean hasPrincipal(java.security.Principal)> jcode:$r3 = r0.<org.exolab.jms.net.multiplexer.MultiplexedManagedConnection: java.security.Principal _principal> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._disconnected" --- 9064 313 36 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:$z1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: boolean _disconnected> ctxt:
+ * 28122 250 33 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void disconnected()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: boolean _disconnected> = 1 ctxt:
+ * 9086 332 36 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: int waitForSpace()> jcode:$z2 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: boolean _disconnected> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._fragment" --- 39438 1509 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r22 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> ctxt:
+ * 12287 403 14 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> = null ctxt:
+ * 39464 1509 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r22 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._fragment" --- 39438 1509 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r22 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> ctxt:
+ * 12317 2107 14 WRITE msig:<org.exolab.jms.net.uri.URI: void setFragment(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> = null ctxt:
+ * 39464 1509 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r22 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.uri.URI._fragment" --- 33556 403 21 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> = null ctxt:
+ * 33631 2177 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r34 = r2.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> ctxt:
+ * 33561 2107 21 WRITE msig:<org.exolab.jms.net.uri.URI: void setFragment(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _fragment> = null ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._data" --- 30815 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ * 12913 131 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> = $r3 ctxt:
+ * 31013 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._data" --- 30813 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ * 12913 131 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> = $r3 ctxt:
+ * 31046 168 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$r1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._data" --- 30815 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ * 12913 131 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> = $r3 ctxt:
+ * 31015 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._data" --- 30813 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ * 12913 131 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> = $r3 ctxt:
+ * 31013 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._data" --- 30815 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ * 12913 131 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> = $r3 ctxt:
+ * 31046 168 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void flush()> jcode:$r1 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexOutputStream._data" --- 30813 187 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ * 12913 131 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> = $r3 ctxt:
+ * 31015 190 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexOutputStream: void write(byte[],int,int)> jcode:$r3 = r0.<org.exolab.jms.net.multiplexer.MultiplexOutputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Semaphore.permits_" --- 13133 109 37 READ msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void acquire()> jcode:$l2 = r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> ctxt:
+ * 13425 157 34 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void release()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = $l1 ctxt:
+ * 13135 109 37 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void acquire()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = $l3 ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Semaphore.permits_" --- 13131 108 37 READ msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void acquire()> jcode:$l0 = r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> ctxt:
+ * 13425 157 34 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void release()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = $l1 ctxt:
+ * 13135 109 37 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void acquire()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = $l3 ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Semaphore.permits_" --- 57589 157 36 READ msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void release()> jcode:$l0 = r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> ctxt:
+ * 13425 157 34 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void release()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = $l1 ctxt:
+ * 57590 157 36 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void release()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = $l1 ctxt:
+ ***
+
+*** AV-I --- "EDU.oswego.cs.dl.util.concurrent.Semaphore.permits_" --- 66017 157 34 READ msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void release()> jcode:$l0 = r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> ctxt:
+ * 7414 100 27 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void <init>(long)> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = l0 ctxt:
+ * 66018 157 34 WRITE msig:<EDU.oswego.cs.dl.util.concurrent.Semaphore: void release()> jcode:r0.<EDU.oswego.cs.dl.util.concurrent.Semaphore: long permits_> = $l1 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._data" --- 30496 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: byte[] _data> ctxt:
+ * 12919 136 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: byte[] _data> = $r5 ctxt:
+ * 30567 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._data" --- 7789 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: byte[] _data> ctxt:
+ * 12432 159 24 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void destroy()> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: byte[] _data> = null ctxt:
+ * 7873 364 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$r2 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: byte[] _data> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.security.BasicPrincipal._password" --- 12443 122 19 READ msig:<org.exolab.jms.common.security.BasicPrincipal: boolean equals(java.lang.Object)> jcode:$r5 = r0.<org.exolab.jms.common.security.BasicPrincipal: java.lang.String _password> ctxt:
+ * 6469 89 20 WRITE msig:<org.exolab.jms.common.security.BasicPrincipal: void <init>(java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.common.security.BasicPrincipal: java.lang.String _password> = r2 ctxt:
+ * 12475 122 19 READ msig:<org.exolab.jms.common.security.BasicPrincipal: boolean equals(java.lang.Object)> jcode:$r5 = r0.<org.exolab.jms.common.security.BasicPrincipal: java.lang.String _password> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67491 208 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13901 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70471 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 13567 239 19 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 70507 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70471 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 13566 237 19 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 70507 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70471 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 13573 366 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 70507 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70465 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13573 366 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 70481 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70465 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13573 366 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 70492 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70461 366 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13573 366 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 70475 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70456 239 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13573 366 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 70498 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70456 239 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12754 96 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 70501 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13769 366 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13770 366 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13752 239 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13770 366 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13751 237 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13752 239 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13751 237 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13770 366 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13750 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13751 237 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13750 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13752 239 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13750 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13770 366 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 30500 366 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12916 96 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 30566 208 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 30495 208 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12916 96 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 30566 208 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 30495 208 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12916 96 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 30572 366 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 7232 208 22 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 8775 340 23 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 7233 208 22 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 7232 208 22 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 8775 340 23 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 7234 223 22 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 13788 208 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 14888 340 38 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void receive(java.io.DataInputStream,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i21 ctxt:
+ * 13796 366 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 31140 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 67829 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 33674 208 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 31141 237 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 67829 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 33674 208 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 31142 239 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 67829 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 33674 208 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67819 223 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12905 96 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 70129 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67820 237 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12905 96 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 70129 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67846 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 13109 208 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 70135 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67474 239 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13104 96 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67820 237 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12905 96 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 70135 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70455 237 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12754 96 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 70456 239 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 30500 366 34 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12916 96 37 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 30572 366 34 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67819 223 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12905 96 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 67821 239 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67473 237 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13104 96 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67479 366 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13901 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70471 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 13040 223 19 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 70507 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 70456 239 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12754 96 19 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 70507 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67819 223 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12905 96 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 70135 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67479 366 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:$i5 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13104 96 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67472 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13104 96 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 65895 208 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i4 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12905 96 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 65898 223 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67473 237 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13901 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67474 239 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i12 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13901 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67472 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 13901 366 21 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void copy(byte[],int,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = $i6 ctxt:
+ * 67983 223 20 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.multiplexer.MultiplexInputStream._available" --- 67819 223 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i10 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ * 12905 96 20 WRITE msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: void <init>(int,org.exolab.jms.net.multiplexer.Multiplexer,int)> jcode:r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> = 0 ctxt:
+ * 67820 237 21 READ msig:<org.exolab.jms.net.multiplexer.MultiplexInputStream: int read(byte[],int,int)> jcode:$i11 = r0.<org.exolab.jms.net.multiplexer.MultiplexInputStream: int _available> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.common.threads.ThreadFactory._nameSeed" --- 8053 100 33 READ msig:<org.exolab.jms.common.threads.ThreadFactory: java.lang.Thread newThread(java.lang.Runnable)> jcode:$i1 = r0.<org.exolab.jms.common.threads.ThreadFactory: int _nameSeed> ctxt:
+ * 7454 75 27 WRITE msig:<org.exolab.jms.common.threads.ThreadFactory: void <init>(java.lang.ThreadGroup,java.lang.String,boolean)> jcode:r0.<org.exolab.jms.common.threads.ThreadFactory: int _nameSeed> = 0 ctxt:
+ * 8054 100 33 WRITE msig:<org.exolab.jms.common.threads.ThreadFactory: java.lang.Thread newThread(java.lang.Runnable)> jcode:r0.<org.exolab.jms.common.threads.ThreadFactory: int _nameSeed> = $i2 ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._queryString" --- 39437 1501 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r18 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> ctxt:
+ * 12286 391 14 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> = null ctxt:
+ * 39463 1501 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r18 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> ctxt:
+ ***
+
+*** AV-II --- "org.exolab.jms.net.uri.URI._queryString" --- 33555 391 21 WRITE msig:<org.exolab.jms.net.uri.URI: void <init>(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> = null ctxt:
+ * 33629 2171 19 READ msig:<org.exolab.jms.net.uri.URI: boolean equals(java.lang.Object)> jcode:$r28 = r2.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> ctxt:
+ * 33560 2057 21 WRITE msig:<org.exolab.jms.net.uri.URI: void setQueryString(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> = null ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.net.uri.URI._queryString" --- 39437 1501 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r18 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> ctxt:
+ * 12311 2057 14 WRITE msig:<org.exolab.jms.net.uri.URI: void setQueryString(java.lang.String)> jcode:r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> = null ctxt:
+ * 39463 1501 34 READ msig:<org.exolab.jms.net.uri.URI: java.lang.String getSchemeSpecificPart()> jcode:$r18 = r0.<org.exolab.jms.net.uri.URI: java.lang.String _queryString> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.message.DestinationImpl.address_" --- 71025 113 31 READ msig:<org.exolab.jms.message.DestinationImpl: java.lang.String getDestination()> jcode:$r1 = r0.<org.exolab.jms.message.DestinationImpl: java.lang.String address_> ctxt:
+ * 47884 104 36 WRITE msig:<org.exolab.jms.message.DestinationImpl: void readExternal(java.io.ObjectInput)> jcode:r0.<org.exolab.jms.message.DestinationImpl: java.lang.String address_> = $r5 ctxt:
+ * 71026 113 31 READ msig:<org.exolab.jms.message.DestinationImpl: java.lang.String getDestination()> jcode:$r1 = r0.<org.exolab.jms.message.DestinationImpl: java.lang.String address_> ctxt:
+ ***
+
+*** AV-I --- "org.exolab.jms.message.DestinationImpl.address_" --- 71025 113 31 READ msig:<org.exolab.jms.message.DestinationImpl: java.lang.String getDestination()> jcode:$r1 = r0.<org.exolab.jms.message.DestinationImpl: java.lang.String address_> ctxt:
+ * 47751 76 36 WRITE msig:<org.exolab.jms.message.DestinationImpl: void <init>()> jcode:r0.<org.exolab.jms.message.DestinationImpl: java.lang.String address_> = null ctxt:
+ * 71026 113 31 READ msig:<org.exolab.jms.message.DestinationImpl: java.lang.String getDestination()> jcode:$r1 = r0.<org.exolab.jms.message.DestinationImpl: java.lang.String address_> ctxt:
+ ***
+total time (msec): 879406
 
 
 -------------------------------------
 
-Number of Threads: 19
-Number of Shared Variables: 102
-Number of Lock Nodes: 12177
-Number of Message Nodes: 239
-Number of Non-Method Entry/Exit Nodes: 44152
-Number of Read/Write Nodes: 31736
-Number of Total Nodes: 44152
+Number of Threads: 29
+Number of Shared Variables: 271
+Number of Lock Nodes: 17157
+Number of Message Nodes: 621
+Number of Non-Method Entry/Exit Nodes: 71886
+Number of Read/Write Nodes: 54108
+Number of Total Nodes: 71886
 
-Number of BUGS (no contexts): 29
+Number of BUGS (no contexts): 0
 
-Number of BUGS: 63
+Number of BUGS: 0
 

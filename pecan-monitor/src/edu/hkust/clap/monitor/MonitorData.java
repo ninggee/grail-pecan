@@ -22,12 +22,13 @@ public class MonitorData implements Serializable
 	 private HashMap<Integer, Vector<RWNode>> rtId2Vector ;
 	 private String classname;
 	 
-	 public List<String> ctxts = ContextValueManager.ctxts;// contain the list of all the contexts.
+	 public List<String> ctxts = null;// contain the list of all the contexts.
 	 
 	 public MonitorData()
 	 {		
 		 mainvec = new Vector<AbstractNode>();
 		 rtId2Vector = new HashMap<Integer, Vector<RWNode>>();
+		 ctxts =ContextValueManager.ctxts;// for dumping
 		// speHashMap = new HashMap<Integer,HashMap<Integer,Vector<RWNode>>>(); 
 	 }
 	 

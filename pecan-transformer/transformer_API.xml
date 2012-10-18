@@ -145,7 +145,7 @@
     <antcall target="build"/>   
         <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">
             <arg line="${projectname}"/>
-        	 <jvmarg line="-Xmx14g"/>        	 
+        	 <jvmarg line="-Xmx2g"/>        	 
         	<syspropertyset>
         	<propertyref builtin="all"/>        	            	
         	</syspropertyset>
@@ -157,7 +157,7 @@
 	    <property name="projectname" value="mtrt"/>	
 	    <antcall target="build"/>   
 	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-	        	 <jvmarg line="-Xmx14g"/>        	 
+	        	 <jvmarg line="-Xmx2g"/>        	 
 	        	<syspropertyset>
 	        	<propertyref builtin="all"/>        	            	
 	        	</syspropertyset>
@@ -170,7 +170,7 @@
 	    <property name="projectname" value="Cache4j"/>	
 	    <antcall target="build"/>   
 	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-	        	 <jvmarg line="-Xmx14g"/>        	 
+	        	 <jvmarg line="-Xmx2g"/>        	 
 	        	<syspropertyset>
 	        	<propertyref builtin="all"/>        	            	
 	        	</syspropertyset>
@@ -183,7 +183,7 @@
 		    <property name="projectname" value="Jspider"/>	
 		    <antcall target="build"/>   
 		        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-		        	 <jvmarg line="-Xmx14g"/>        	 
+		        	 <jvmarg line="-Xmx2g"/>        	 
 		        	<syspropertyset>
 		        	<propertyref builtin="all"/>        	            	
 		        	</syspropertyset>
@@ -196,7 +196,7 @@
 		    <property name="projectname" value="Specjbb"/>	
 		    <antcall target="build"/>   
 		        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-		        	 <jvmarg line="-Xmx14g"/>        	 
+		        	 <jvmarg line="-Xmx2g"/>        	 
 		        	<syspropertyset>
 		        	<propertyref builtin="all"/>        	            	
 		        	</syspropertyset>
@@ -209,7 +209,7 @@
 		    <property name="projectname" value="Mail"/>	
 		    <antcall target="build"/>   
 		        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-		        	 <jvmarg line="-Xmx14g"/>        	 
+		        	 <jvmarg line="-Xmx2g"/>        	 
 		        	<syspropertyset>
 		        	<propertyref builtin="all"/>        	            	
 		        	</syspropertyset>
@@ -221,7 +221,7 @@
 			    <property name="projectname" value="Tuple"/>	
 			    <antcall target="build"/>   
 			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	 <jvmarg line="-Xmx2g"/>        	 
 			        	<syspropertyset>
 			        	<propertyref builtin="all"/>        	            	
 			        	</syspropertyset>
@@ -234,7 +234,7 @@
 			    <property name="projectname" value="Openjms"/>	
 			    <antcall target="build"/>   
 			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	 <jvmarg line="-Xmx2g"/>        	 
 			        	<syspropertyset>
 			        	<propertyref builtin="all"/>        	            	
 			        	</syspropertyset>
@@ -247,7 +247,7 @@
 			    <property name="projectname" value="Jigsaw"/>	
 			    <antcall target="build"/>   
 			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	 <jvmarg line="-Xmx2g"/>        	 
 			        	<syspropertyset>
 			        	<propertyref builtin="all"/>        	            	
 			        	</syspropertyset>
@@ -259,7 +259,7 @@
 			    <property name="projectname" value="Derby"/>	
 			    <antcall target="build"/>   
 			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	 <jvmarg line="-Xmx2g"/>        	 
 			        	<syspropertyset>
 			        	<propertyref builtin="all"/>        	            	
 			        	</syspropertyset>
@@ -271,7 +271,7 @@
 			    <property name="projectname" value="Tomcat"/>	
 			    <antcall target="build"/>   
 			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	 <jvmarg line="-Xmx2g"/>        	 
 			        	<syspropertyset>
 			        	<propertyref builtin="all"/>        	            	
 			        	</syspropertyset>
@@ -283,7 +283,7 @@
 			    <property name="projectname" value="Avrora"/>	
 			    <antcall target="build"/>   
 			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	 <jvmarg line="-Xmx2g"/>        	 
 			        	<syspropertyset>
 			        	<propertyref builtin="all"/>        	            	
 			        	</syspropertyset>
@@ -295,7 +295,7 @@
 			    <property name="projectname" value="Lucene"/>	
 			    <antcall target="build"/>   
 			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
-			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	 <jvmarg line="-Xmx2g"/>        	 
 			        	<syspropertyset>
 			        	<propertyref builtin="all"/>        	            	
 			        	</syspropertyset>
@@ -310,7 +310,7 @@
 	    <property name="projectname" value="Simple"/>	
 	    <antcall target="build"/>   
 	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	          
-	        	<jvmarg line="-Xmx14g"/>        	 
+	        	<jvmarg line="-Xmx2g"/>        	 
 	        	<syspropertyset>
 	        	<propertyref builtin="all"/>        	            	
 	        	</syspropertyset>

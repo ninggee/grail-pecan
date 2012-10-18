@@ -46,12 +46,8 @@ public class EngineMain
     	engine.findAllPatterns();
     	long detect_end_time = System.currentTimeMillis();
     	
-    	//engine.showAllPatterns();
-    	engine.saveAllPatterns();
-    	//engine.organizePatterns();
-    	
-    	
-    	
+    	engine.showAllPatterns();
+    	engine.saveAllPatterns();   	
 
     	long tranform_start_time = System.currentTimeMillis();  	
     	if(Parameters.noDump)

@@ -10,14 +10,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
+
+
+
+import properties.PropertyManager;
+
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.commons.EmptyVisitor;
-
-
-import properties.PropertyManager;
 
 
 import edu.hkust.clap.lpxz.context.ContextValueManager;
@@ -103,7 +105,7 @@ public class PreciseStackGetter {
 				 
 			}else {
 				try {
-					String classmethodsig = getClassMethodSig(elei);// precise, but very inefficient!!
+					String classmethodsig = getClassMethodSig(elei);// ASM here. precise, but very inefficient!!
 					String partInlastBrace =FullSTEManipulater.getPartInLastBrace(elei.toString());				
 					 {
 						

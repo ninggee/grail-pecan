@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-2012-10-07 12:45:55.599 GMT:
- Booting Derby version The Apache Software Foundation - Apache Derby - 10.1.1.0 - (208786): instance c013800d-013a-3b42-a9b6-000000000c7e
+2012-10-18 12:08:53.678 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.1.1.0 - (208786): instance c013800d-013a-73c6-b653-000000000c7e
 on database directory /home/lpxz/eclipse/workspace/pecan/pecan-monitor/db/openjmsdb 
 
 Database Class Loader started - derby.database.classpath=''

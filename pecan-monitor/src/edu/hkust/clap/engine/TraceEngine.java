@@ -2616,7 +2616,7 @@ public class TraceEngine
 			    		
 		    		}
 
-		    	SaveLoad.save(CSmethodPairs, SaveLoad.default_filename );	    	
+		    	SaveLoad.save(CSmethodPairs, SaveLoad.default_MCPairList );	    	
 		    	SootAgent4Pecan.sootDestroyNecessary();
 	    	}
 		    	

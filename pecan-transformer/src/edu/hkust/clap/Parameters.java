@@ -1,6 +1,5 @@
 package edu.hkust.clap;
 
-import properties.PropertyManager;
 
 public class Parameters {
 
@@ -22,12 +21,8 @@ public class Parameters {
 	public static boolean isMethodSynchronized = false;
 	public static boolean isInsideConstructor = false;
 
-	public static String ClassPath =PropertyManager.ClassPath;//"/home/lpxz/eclipse/workspace/app/bin";
-	
-	
 	public static boolean isRuntime=true;
 	public static boolean isReplay=false;
-	public static boolean isOutputJimple=PropertyManager.outputform.equals("J")||PropertyManager.outputform.equals("jimple");
 	public static boolean isMethodNonPrivate = true;
 	public static boolean isMethodStaticNonPara = false;
 	public static String userdir ="/home/lpxz/eclipse/workspace/pecan/pecan-transformer";

@@ -22,7 +22,7 @@ public class PropertyManager {
 	
 	public static Properties props ;
 	static{
-		props = loadProperties("/home/lpxz/eclipse/workspace/APIDesigner/properties");
+		props = loadProperties("/home/lpxz/eclipse/workspace/Dcon/properties");
 	}
 	
 	public static String projectName = System.getProperty("projectname");	
@@ -31,8 +31,9 @@ public class PropertyManager {
 	public static String mainClass= props.getProperty(projectName+"_trans_mainClass"); //"benchmarks.dstest.MTLinkedListInfiniteLoop";//System.getProperty("mainclass");//"driver.OpenJMSDriver";
     public static String excludeString = props.getProperty(projectName+"_trans_excludelist");
     public static String includeString = props.getProperty(projectName+"_trans_includelist");
-    public static String outputform = props.getProperty(projectName+"_trans_outputform");
-	
+    public static String outputform =    props.getProperty(projectName+"_trans_outputform");
+    public static boolean isOutputJimple=props.getProperty(projectName+"_trans_outputform").equals("J")||props.getProperty(projectName+"_trans_outputform").equals("jimple");
+   
     //for Dcon
 //	public static String origAnalyzedFolder = props.getProperty("classpath"); //"/home/lpxz/eclipse/workspace/app/bin";////"/home/lpxz/eclipse/workspace/openjms/bin";
 //	public static String mainClass= props.getProperty("mainClass"); //"benchmarks.dstest.MTLinkedListInfiniteLoop";//System.getProperty("mainclass");//"driver.OpenJMSDriver";
@@ -107,6 +108,10 @@ public class PropertyManager {
     	  }
     	    return toret;
     }
+
+	
+
+	
 
 
 }

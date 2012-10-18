@@ -18,11 +18,11 @@ public class PropertyManager {
 	public static boolean useasmStack = true;
 	public static Properties props ;
 	static{
-		props = loadProperties("/home/lpxz/eclipse/workspace/APIDesigner/properties");
+		props = loadProperties("/home/lpxz/eclipse/workspace/Dcon/properties");
 	}
 	
 	//must set the project name, always
-	public static String projectname =  System.getProperty("projectname");
+	public static String projectname = System.getProperty("projectname");
 	
 	
 	

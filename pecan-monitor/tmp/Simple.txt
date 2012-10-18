@@ -1,0 +1,31 @@
+
+*** Violation Patterns [ID - Memory Location - Line Number - Thread - Access Type] ***
+
+--------------------------------------
+
+*** AV-I --- "Simple.sharedV" --- 6 21 9 WRITE msig:<Simple$1: void run()> jcode:<Simple: int sharedV> = 1 ctxt:
+ * 9 37 10 WRITE msig:<Simple$2: void run()> jcode:<Simple: int sharedV> = 20 ctxt:
+ * 10 25 9 WRITE msig:<Simple$1: void run()> jcode:<Simple: int sharedV> = 3 ctxt:
+ ***
+
+*** AV-I --- "Simple.sharedM" --- 8 22 9 WRITE msig:<Simple$1: void run()> jcode:<Simple: int sharedM> = 2 ctxt:
+ * 7 35 10 WRITE msig:<Simple$2: void run()> jcode:<Simple: int sharedM> = 10 ctxt:
+ * 12 26 9 WRITE msig:<Simple$1: void run()> jcode:<Simple: int sharedM> = 4 ctxt:
+ ***
+total time (msec): 1843
+
+
+-------------------------------------
+
+Number of Threads: 3
+Number of Shared Variables: 2
+Number of Lock Nodes: 2
+Number of Message Nodes: 8
+Number of Non-Method Entry/Exit Nodes: 16
+Number of Read/Write Nodes: 6
+Number of Total Nodes: 16
+
+Number of BUGS (no contexts): 2
+
+Number of BUGS: 2
+

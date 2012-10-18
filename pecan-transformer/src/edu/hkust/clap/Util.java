@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+import properties.PropertyManager;
+
 import soot.RefType;
 import soot.SootClass;
 import soot.SootMethod;
@@ -113,7 +115,7 @@ public class Util{
 		}
 		tempdir = tempdir+"tmp"+System.getProperty("file.separator");
 		
-		if(Parameters.isOutputJimple)
+		if(PropertyManager.isOutputJimple)
 			tempdir = tempdir+Parameters.OUTPUT_JIMPLE+System.getProperty("file.separator");
 		
 		if(Parameters.isRuntime)
@@ -144,7 +146,7 @@ public class Util{
 		}
 		tempdir = tempdir+"tmp"+System.getProperty("file.separator");
 		
-		if(Parameters.isOutputJimple)
+		if(PropertyManager.isOutputJimple)
 			tempdir = tempdir+Parameters.OUTPUT_JIMPLE+System.getProperty("file.separator");
 		
 	

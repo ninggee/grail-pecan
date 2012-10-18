@@ -910,3 +910,15 @@
 20:08:54.579 INFO  [main] - Server accepting connections on rmi://127.0.1.1:1099/
 20:08:54.617 INFO  [main] - JNDI service accepting connections on rmi://127.0.1.1:1099/
 20:08:54.650 INFO  [main] - Admin service accepting connections on rmi://127.0.1.1:1099/
+22:52:10.219 INFO  [Main Thread] - Server accepting connections on tcp://127.0.1.1:3035/
+22:52:10.236 INFO  [Main Thread] - JNDI service accepting connections on tcp://127.0.1.1:3035/
+22:52:10.238 INFO  [Main Thread] - Admin service accepting connections on tcp://127.0.1.1:3035/
+22:52:10.346 INFO  [Main Thread] - Server accepting connections on rmi://127.0.1.1:1099/
+22:52:10.346 INFO  [Main Thread] - JNDI service accepting connections on rmi://127.0.1.1:1099/
+22:52:10.347 INFO  [Main Thread] - Admin service accepting connections on rmi://127.0.1.1:1099/
+22:53:16.720 INFO  [main] - Server accepting connections on tcp://127.0.1.1:3035/
+22:53:16.756 INFO  [main] - JNDI service accepting connections on tcp://127.0.1.1:3035/
+22:53:16.784 INFO  [main] - Admin service accepting connections on tcp://127.0.1.1:3035/
+22:53:16.898 INFO  [main] - Server accepting connections on rmi://127.0.1.1:1099/
+22:53:16.933 INFO  [main] - JNDI service accepting connections on rmi://127.0.1.1:1099/
+22:53:16.967 INFO  [main] - Admin service accepting connections on rmi://127.0.1.1:1099/

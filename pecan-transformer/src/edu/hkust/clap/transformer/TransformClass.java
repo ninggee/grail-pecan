@@ -323,7 +323,7 @@ public void processAllAtOnce(String[] args, Visitor visitor) throws Exception {
 		String argString = PropertyManager.preTransArg + " -d "+path;// process-dir, no missing of classes!
 		//excludeArgString + includeArgString;
 
-		if(Parameters.isOutputJimple)
+		if(PropertyManager.isOutputJimple)
 		{
 			soot.Main.main(("-f jimple "+argString).split(" "));//"-f","jimple",c"-x","javato.","-x","edu." \\sootOutput "-process-dir", processDir
 		}
@@ -375,10 +375,10 @@ public void processAllAtOnce(String[] args, Visitor visitor) throws Exception {
 		 String newCP = Util.getPureTmpDirectory() + "/" + Parameters.PHASE_PRE + "/" +PropertyManager.projectName ;
 		String path = Util.getPureTmpDirectory() + "/" + Parameters.PHASE_RECORD + "/" +PropertyManager.projectName ;//Util.getTmpDirectory();//.replace("\\", "\\\\")
 		System.err.println("transform to folder:" + path);
-		String argString = "-cp .:"+ newCP + ":" +Parameters.ClassPath +" -pp -validate " + mainclass+" -d "+path+
+		String argString = "-cp .:"+ newCP + ":" +PropertyManager.ClassPath +" -pp -validate " + mainclass+" -d "+path+
 		excludeArgString + includeArgString;
 		
-		if(Parameters.isOutputJimple)
+		if(PropertyManager.isOutputJimple)
 		{
 			soot.Main.main(("-f jimple "+argString).split(" "));//"-f","jimple",c"-x","javato.","-x","edu." \\sootOutput "-process-dir", processDir
 		}
@@ -420,10 +420,10 @@ public void processAllAtOnce(String[] args, Visitor visitor) throws Exception {
         // redirect the input to the Pre.
 		String path = Util.getPureTmpDirectory() + "/" + Parameters.PHASE_RECORD + "/" +PropertyManager.projectName ;//Util.getTmpDirectory();//.replace("\\", "\\\\")
 		System.err.println("transform to folder:" + path);
-		String argString = "-cp .:"+ Parameters.ClassPath +" -pp -validate " + mainclass+" -d "+path+
+		String argString = "-cp .:"+ PropertyManager.ClassPath +" -pp -validate " + mainclass+" -d "+path+
 		excludeArgString + includeArgString;
 		
-		if(Parameters.isOutputJimple)
+		if(PropertyManager.isOutputJimple)
 		{
 			soot.Main.main(("-f jimple "+argString).split(" "));//"-f","jimple",c"-x","javato.","-x","edu." \\sootOutput "-process-dir", processDir
 		}
@@ -445,16 +445,16 @@ public void processAllAtOnce(String[] args, Visitor visitor) throws Exception {
 		Visitor.resetParameter();
 		
 		String path = Util.getTmpDirectory();//.replace("\\", "\\\\")
-		String[] args1 = {"-cp","."+":"+Parameters.ClassPath,"-pp","-validate",mainclass,"-d",path,
+		String[] args1 = {"-cp","."+":"+PropertyManager.ClassPath,"-pp","-validate",mainclass,"-d",path,
 				"-f","jimple",
 				"-x","jrockit.","-x","edu.","-x","com.","-x","checkers.","-x","org.xmlpull.","-x","org.apache.xml.","-x","org.apache.xpath."};
-		String[] args2 = {"-cp","."+":"+Parameters.ClassPath,"-pp","-validate",mainclass,"-d",path,
+		String[] args2 = {"-cp","."+":"+PropertyManager.ClassPath,"-pp","-validate",mainclass,"-d",path,
 				"-x","org.apache.xalan.",
 				"-x","org.apache.xpath.",
 				"-i","org.apache.derby.",
 				"-i","org.w3c.",
 				"-x","jrockit.","-x","edu.","-x","com.","-x","javax.","-x","checkers.","-x","org.xmlpull."};
-		String[] args3 = {"-cp",Parameters.ClassPath,"-pp","-validate",mainclass,"-d",path,
+		String[] args3 = {"-cp",PropertyManager.ClassPath,"-pp","-validate",mainclass,"-d",path,
 				"-i","org.apache.log4j",
 				"-x","org.apache.xalan.",
 				"-x","org.apache.xpath.",
@@ -462,7 +462,7 @@ public void processAllAtOnce(String[] args, Visitor visitor) throws Exception {
 				"-i","org.w3c.",
 				"-x","org.springframework.","-x","org.jboss.","-x","jrockit.","-x","edu.","-x","com.","-x","javax.","-x","checkers.","-x","org.xmlpull."};
 	
-		if(Parameters.isOutputJimple)
+		if(PropertyManager.isOutputJimple)
 		{
 			soot.Main.main(args1);//"-f","jimple",c"-x","javato.","-x","edu." \\sootOutput "-process-dir", processDir
 		}
@@ -500,7 +500,7 @@ public void processAllAtOnce(String[] args, Visitor visitor) throws Exception {
        PhaseOptions.v().setPhaseOption("cg.spark", "enabled:true");
 				
        // redirect the input classpath to pre.
-       String newCP = Parameters.ClassPath;
+       String newCP = PropertyManager.ClassPath;
        Scene.v().setSootClassPath(System.getProperty("sun.boot.class.path")
                + File.pathSeparator + System.getProperty("java.class.path") +File.pathSeparator+
                newCP);
@@ -572,7 +572,7 @@ public void processAllAtOnce(String[] args, Visitor visitor) throws Exception {
      	
        Scene.v().setSootClassPath(System.getProperty("sun.boot.class.path")
                + File.pathSeparator + System.getProperty("java.class.path")+File.pathSeparator+
-               Parameters.ClassPath);
+               PropertyManager.ClassPath);
               
        PackManager.v().getPack("jtp").add(new Transform("jtp.transformer", new JTPTransformer()));
    

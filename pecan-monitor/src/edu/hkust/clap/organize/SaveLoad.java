@@ -21,7 +21,7 @@ public class SaveLoad {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Object object = SaveLoad.load(SaveLoad.default_filename);
+		Object object = SaveLoad.load(SaveLoad.default_MCPairList);
 		List list  =(List)object;
 		for(Object elem : list)
 		{
@@ -38,10 +38,19 @@ public class SaveLoad {
 	
 	public static String default_AllPatterns = "/home/lpxz/eclipse/workspace/pecan/pecan-monitor/tmp/AllPatterns";
 	
-	public static String default_filename = "/home/lpxz/eclipse/workspace/pecan/pecan-monitor/tmp/CSMethodPairList" + PropertyManager.projectname;
+	public static String default_MCPairList = "/home/lpxz/eclipse/workspace/pecan/pecan-monitor/tmp/CSMethodPairList" + PropertyManager.projectname;
 	
 	public static String objectmap_filename = "/home/lpxz/eclipse/workspace/pecan/pecan-monitor/tmp/objectmap" + PropertyManager.projectname;
 
+	public static String default_MCPairList(String projectnamePara) {	
+		
+		return "/home/lpxz/eclipse/workspace/pecan/pecan-monitor/tmp/CSMethodPairList" + projectnamePara;
+	}
+	
+	
+	public static String default_MCPairList_afterFiltering(String projectnamePara) {
+		return default_MCPairList(projectnamePara) + "_afterFiltering";
+	}
 	public static void save(Object toDump, String filename )
 	{
 		ObjectOutputStream out = null;
@@ -141,6 +150,10 @@ public class SaveLoad {
     	}
 		
 	}
+
+
+
+
 
 	
 }

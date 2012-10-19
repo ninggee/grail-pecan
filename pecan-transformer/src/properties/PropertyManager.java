@@ -22,6 +22,7 @@ public class PropertyManager {
 	
 	public static Properties props ;
 	static{
+		
 		props = loadProperties("/home/lpxz/eclipse/workspace/Dcon/properties");
 	}
 	

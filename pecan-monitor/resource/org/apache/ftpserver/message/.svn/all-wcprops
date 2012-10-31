@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/main/resources/org/apache/ftpserver/message
+END
+FtpStatus_zh-tw.properties
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/main/resources/org/apache/ftpserver/message/FtpStatus_zh-tw.properties
+END
+FtpStatus.properties
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/main/resources/org/apache/ftpserver/message/FtpStatus.properties
+END
+FtpStatus_en.properties
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/main/resources/org/apache/ftpserver/message/FtpStatus_en.properties
+END

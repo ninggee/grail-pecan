@@ -10,10 +10,10 @@
             <pathelement location="/home/lpxz/eclipse/workspace/soot24/lib/ant-contrib.jar"/>
         </classpath>
     </taskdef>
-	<loadproperties srcFile="../../APIDesigner/properties"/>
+	<loadproperties srcFile="../../Dcon/properties"/>
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../"/>
-	<import file="../../APIDesigner/path_def.xml" />
+	<import file="../../Dcon/path_def.xml" />
 	
     <target name="init">
         <mkdir dir="bin"/>
@@ -69,9 +69,11 @@
     
 
     <target name="EngineMain">
+    	
         <java classname="edu.hkust.clap.engine.EngineMain" failonerror="true" fork="yes">
             <jvmarg line="-Xmx14g"/>   
-        	 <sysproperty key="projectname" value="${projectname}"/>        
+        	 <sysproperty key="projectname" value="${projectname}"/>    
+        	
             <classpath refid="pecan-monitor.classpath"/>
         	 <classpath refid="${projectname}.classpath"/>
         </java>
@@ -85,7 +87,58 @@
 		 <antcall target="clean"/>
 	</target-->
 
+	<target name ="detect_API_Raytracer">		
+		 <property name="projectname" value="Raytracer"/>	
+		 <antcall target="build"/>	
+		<antcall target="monitor"/>
+	 	 <antcall target="EngineMain"/>
+   	<!--remove the trace object, it is IR, and  it is too large-->
+		 <antcall target="clean"/>
+	</target>
 	
+	<target name ="detect_API_Weblech">		
+		 <property name="projectname" value="Weblech"/>	
+		 <antcall target="build"/>	
+		<antcall target="monitor"/>
+	 	 <antcall target="EngineMain"/>
+   	<!--remove the trace object, it is IR, and  it is too large-->
+		 <antcall target="clean"/>
+	</target>
+		
+		<target name ="detect_API_Hedc">		
+			 <property name="projectname" value="Hedc"/>	
+			 <antcall target="build"/>	
+			<antcall target="monitor"/>
+		 	 <antcall target="EngineMain"/>
+	   	<!--remove the trace object, it is IR, and  it is too large-->
+			 <antcall target="clean"/>
+		</target>
+	<target name ="detect_API_Bayes">		
+		 <property name="projectname" value="Bayes"/>	
+		 <antcall target="build"/>	
+		<antcall target="monitor"/>
+	 	 <antcall target="EngineMain"/>
+   	<!--remove the trace object, it is IR, and  it is too large-->
+		 <antcall target="clean"/>
+	</target>
+		
+		<target name ="detect_API_Vacation">		
+			 <property name="projectname" value="Vacation"/>	
+			 <antcall target="build"/>	
+			<antcall target="monitor"/>
+		 	 <antcall target="EngineMain"/>
+	   	<!--remove the trace object, it is IR, and  it is too large-->
+			 <antcall target="clean"/>
+		</target>
+		
+		<target name ="detect_API_Laby">		
+			 <property name="projectname" value="Laby"/>	
+			 <antcall target="build"/>	
+			<antcall target="monitor"/>
+		 	 <antcall target="EngineMain"/>
+	   	<!--remove the trace object, it is IR, and  it is too large-->
+			 <antcall target="clean"/>
+		</target>
 	<target name ="detect_API_mtrt">		
 		 <property name="projectname" value="mtrt"/>	
 		 <antcall target="build"/>	
@@ -198,7 +251,14 @@
 			 <antcall target="clean"/>
 		</target>
 	
-	
+	<target name ="detect_API_Ftpserver">		
+			 <property name="projectname" value="Ftpserver"/>	
+			 <antcall target="build"/>	
+			<antcall target="monitor"/>
+		 	 <antcall target="EngineMain"/>
+	   	<!--remove the trace object, it is IR, and  it is too large-->
+			 <antcall target="clean"/>
+		</target>
 	
 	
 	

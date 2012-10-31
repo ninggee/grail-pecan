@@ -2573,8 +2573,9 @@ public class TraceEngine
 	    	
     		if(PropertyManager.useasmStack)
 	    	{
+    			if(list==null || list.size()==0) return;
 	    		SootAgent4Pecan.sootLoadNecessary(list);
-
+                 
 		    	Iterator<Pattern> patternsIt = list.iterator();
 				int pid  = 0;
 		    		while(patternsIt.hasNext())
@@ -2592,21 +2593,27 @@ public class TraceEngine
 				    			RWNode cnode = patternI.getNodeJ();
 				    			
 				    			
-								
-				    			// need the context of RWnode now:
-				    			CSMethod csMethod_pc =OrganizeResults.pc2csMethod(pnode, cnode);
-				    			CSMethod csMethod_r  =OrganizeResults.r2csMethod(rnode);
-				    			CSMethodPair pair = new CSMethodPair(csMethod_pc, csMethod_r);
-				    			// for statistic
-				    			{
-				    				numOfBugs++;
-					    			pcrStrings.add(csMethod_pc.getMsig() + csMethod_pc.getpAnc() + csMethod_pc.getcAnc() + csMethod_r.getMsig() + csMethod_r.getrAnc());
-				    			}
+								try
+								{
+					    			// need the context of RWnode now:
+					    			CSMethod csMethod_pc =OrganizeResults.pc2csMethod(pnode, cnode);
+					    			CSMethod csMethod_r  =OrganizeResults.r2csMethod(rnode);
+					    			CSMethodPair pair = new CSMethodPair(csMethod_pc, csMethod_r);
+					    			// for statistic
+					    			{
+					    				numOfBugs++;
+						    			pcrStrings.add(csMethod_pc.getMsig() + csMethod_pc.getpAnc() + csMethod_pc.getcAnc() + csMethod_r.getMsig() + csMethod_r.getrAnc());
+					    			}
 				    			
-				    			//CommonUtil.print("\n"+p.printToString());
-				    			//System.out.println("\n"+p.printToString());// CAN NOT MOVE ABOVE, THE NODE NEEDS SOME INITIALIZATION ABOVE
+					    			//CommonUtil.print("\n"+p.printToString());
+					    			//System.out.println("\n"+p.printToString());// CAN NOT MOVE ABOVE, THE NODE NEEDS SOME INITIALIZATION ABOVE
 				    			
-				    			CSmethodPairs.add(pair);	
+					    			CSmethodPairs.add(pair);	
+								}catch(Exception e)
+								{
+									System.out.println("exception, i do not care..");
+									
+								}
 			    			}
 			    			
 		    			

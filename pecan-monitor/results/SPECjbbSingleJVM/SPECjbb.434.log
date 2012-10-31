@@ -1,0 +1,10 @@
+Oct 25, 2012 7:05:10 AM spec.jbb.JBBmain main -> INFO: Logging started
+Oct 25, 2012 7:05:12 AM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 1...
+Oct 25, 2012 7:05:14 AM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 2...
+Oct 25, 2012 7:05:16 AM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
+Oct 25, 2012 7:05:17 AM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
+Oct 25, 2012 7:05:18 AM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
+Oct 25, 2012 7:05:32 AM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement began Thu Oct 25 07:05:32 HKT 2012 for 0.02 minutes
+Oct 25, 2012 7:05:33 AM spec.jbb.Company displayResultTotals -> INFO: Timing Measurement ended Thu Oct 25 07:05:33 HKT 2012
+Oct 25, 2012 7:05:34 AM spec.jbb.JBBmain callReporter -> INFO: Calling Reporter
+Oct 25, 2012 7:05:35 AM spec.jbb.JBBmain main -> INFO: Logging ended

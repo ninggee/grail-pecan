@@ -1217,3 +1217,5 @@ client-1(http-server-socket-clients:7): caught ClientException: [org.w3c.jigsaw.
 [http-server] /127.0.0.1 refused (overloaded).
 client-1(http-server-socket-clients:8): caught ClientException: [org.w3c.jigsaw.http.ClientException] End Of File
 [http-server] /127.0.0.1 refused (overloaded).
+[http-server] started at: Thu Oct 25 22:57:09 HKT 2012.
+client-0(http-server-socket-clients:1): caught ClientException: [org.w3c.jigsaw.http.ClientException] End Of File

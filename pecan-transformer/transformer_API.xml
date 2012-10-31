@@ -5,11 +5,11 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. -->
 <project basedir="." default="transformer" name="pecan-transformer">
-	<loadproperties srcFile="../../APIDesigner/properties"/>
+	<loadproperties srcFile="../../Dcon/properties"/>
 	
 	<property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../"/>
-	<import file="../../APIDesigner/path_def.xml" />
+	<import file="../../Dcon/path_def.xml" />
     <!--property name="app.location" value="../../app"/>
     <property name="log4j.location" value="../../log4j"/>
     <property name="openjms.location" value="../../openjms"/>
@@ -304,6 +304,19 @@
 			    </target>
 	
 	
+	 <target name="transform_API_Ftpserver">
+			    <property name="projectname" value="Ftpserver"/>	
+			    <antcall target="build"/>   
+			        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	           
+			        	 <jvmarg line="-Xmx14g"/>        	 
+			        	<syspropertyset>
+			        	<propertyref builtin="all"/>        	            	
+			        	</syspropertyset>
+			            <classpath refid="pecan-transformer.classpath"/>
+			        </java>
+			    </target>
+	
+	
 	
 	
 	   <target name="transform_API_Simple">
@@ -317,5 +330,80 @@
 	            <classpath refid="pecan-transformer.classpath"/>
 	        </java>
 	    </target>
+	
+	
+
+	   <target name="transform_API_Raytracer">
+	    <property name="projectname" value="Raytracer"/>	
+	    <antcall target="build"/>   
+	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	          
+	        	<jvmarg line="-Xmx14g"/>        	 
+	        	<syspropertyset>
+	        	<propertyref builtin="all"/>        	            	
+	        	</syspropertyset>
+	            <classpath refid="pecan-transformer.classpath"/>
+	        </java>
+	    </target>
+	
+
+	   <target name="transform_API_Weblech">
+	    <property name="projectname" value="Weblech"/>	
+	    <antcall target="build"/>   
+	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	          
+	        	<jvmarg line="-Xmx14g"/>        	 
+	        	<syspropertyset>
+	        	<propertyref builtin="all"/>        	            	
+	        	</syspropertyset>
+	            <classpath refid="pecan-transformer.classpath"/>
+	        </java>
+	    </target>
+
+	   <target name="transform_API_Hedc">
+	    <property name="projectname" value="Hedc"/>	
+	    <antcall target="build"/>   
+	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	          
+	        	<jvmarg line="-Xmx14g"/>        	 
+	        	<syspropertyset>
+	        	<propertyref builtin="all"/>        	            	
+	        	</syspropertyset>
+	            <classpath refid="pecan-transformer.classpath"/>
+	        </java>
+	    </target>
+	   <target name="transform_API_Bayes">
+	    <property name="projectname" value="Bayes"/>	
+	    <antcall target="build"/>   
+	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	          
+	        	<jvmarg line="-Xmx14g"/>        	 
+	        	<syspropertyset>
+	        	<propertyref builtin="all"/>        	            	
+	        	</syspropertyset>
+	            <classpath refid="pecan-transformer.classpath"/>
+	        </java>
+	    </target>
+	
+	   <target name="transform_API_Vacation">
+	    <property name="projectname" value="Vacation"/>	
+	    <antcall target="build"/>   
+	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	          
+	        	<jvmarg line="-Xmx14g"/>        	 
+	        	<syspropertyset>
+	        	<propertyref builtin="all"/>        	            	
+	        	</syspropertyset>
+	            <classpath refid="pecan-transformer.classpath"/>
+	        </java>
+	    </target>
+
+	   <target name="transform_API_Laby">
+	    <property name="projectname" value="Laby"/>	
+	    <antcall target="build"/>   
+	        <java classname="edu.hkust.clap.Main" failonerror="true" fork="yes">	          
+	        	<jvmarg line="-Xmx14g"/>        	 
+	        	<syspropertyset>
+	        	<propertyref builtin="all"/>        	            	
+	        	</syspropertyset>
+	            <classpath refid="pecan-transformer.classpath"/>
+	        </java>
+	    </target>
+
 	
 </project>

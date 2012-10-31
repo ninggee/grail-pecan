@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources
+END
+dbusermanagertest-hsql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources/dbusermanagertest-hsql.sql
+END
+client.jks
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources/client.jks
+END
+ftpserver.jks
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources/ftpserver.jks
+END
+keymanager-test.jks
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources/keymanager-test.jks
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources/log4j.properties
+END
+dbusermanagertest-cleartext-hsql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources/dbusermanagertest-cleartext-hsql.sql
+END
+users.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1144470/mina/ftpserver/tags/1.0.6/core/src/test/resources/users.properties
+END

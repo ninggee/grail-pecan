@@ -1003,8 +1003,8 @@ public static boolean shouldInstruThis_ClassFilter(String scname)
         	 classarg += " " + classname ; 
          }
         
-		 String argsOfToyW = "-f J -p jb use-original-names:false -pp -cp .:/home/lpxz/jrmc-1.6.0/jre/lib/jsse.jar" + classarg ;
-
+		 String argsOfToyW = "-f J -p jb use-original-names:false -pp -cp .:/home/lpxz/pool/jdk1.6.0_13/jre/lib/jsse.jar" + classarg ;
+		 System.out.println(System.getProperty("java.class.path") );
 
 	    String interString = argsOfToyW;
 		String[] finalArgs = interString.split(" ");

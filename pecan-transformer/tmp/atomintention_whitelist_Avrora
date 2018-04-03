@@ -1,4 +1,0 @@
-<cck.test.TestEngine$WorkThread: void run()>
-<avrora.gui.AvroraGui$PaintThread: void run()>
-<avrora.sim.SimulatorThread: void run()>
-<avrora.actions.SimAction$ShutdownThread: void run()>

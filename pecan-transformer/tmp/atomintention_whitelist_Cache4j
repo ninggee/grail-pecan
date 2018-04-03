@@ -1,3 +1,0 @@
-<net.sf.cache4j.test.SynchronizedCacheTest$TThread: void run()>
-<net.sf.cache4j.test.BlockingCacheTest$TThread: void run()>
-<net.sf.cache4j.CacheCleaner: void run()>

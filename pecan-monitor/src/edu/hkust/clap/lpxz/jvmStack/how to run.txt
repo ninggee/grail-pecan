@@ -1,4 +1,0 @@
-add arg: -output console.txt edu.hkust.clap.Main Simple
-edu.hkust.clap.Main is the program to start.
-Simple is the program to analyze by edu.hkust.clap.Main.
-console.txt provides a good place for rendering the client vm's console.

@@ -1,6 +1,0 @@
-Jul 22, 2012 2:36:30 PM spec.jbb.JBBmain main -> INFO: Logging started
-Jul 22, 2012 2:36:33 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 1...
-Jul 22, 2012 2:36:46 PM spec.jbb.Company primeWithDummyData -> INFO: Loading Warehouse 2...
-Jul 22, 2012 2:36:58 PM spec.jbb.JBBmain DoARun -> INFO: Start User Threads
-Jul 22, 2012 2:37:03 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 1
-Jul 22, 2012 2:37:13 PM spec.jbb.JBBmain DoARun -> INFO:   started user thread for Warehouse 2
